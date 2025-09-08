@@ -1,0 +1,55 @@
+/* Extra small devices (phones) */
+@media (max-width: 575.98px) {
+  nav .searchBox {
+    width: 301px;
+  }
+}
+
+/* Small devices (landscape phones) */
+@media (max-width: 767.98px) {
+   .items {
+    padding: 15px;
+  }
+  .items .imgBox {
+    height: 180px;
+  }
+  .items .product-title {
+    font-size: 13px;
+  }
+  .items .price {
+    font-size: 14px;
+  }
+  .items .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .items .reting {
+    margin-bottom: 8px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 991.98px) {
+  nav .searchBox {
+    right: 10%;
+    top: 66px;
+  }
+  nav .main-menu li {
+    margin: 0 -2px;
+  }
+  #banner {
+    margin-top: 0;
+  }
+}
+
+/* Large devices (desktops) */
+@media (max-width: 1199.98px) {
+  nav .main-menu li {
+    margin: 0 -2px;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (max-width: 1399.98px) {
+  /* Big screens */
+}

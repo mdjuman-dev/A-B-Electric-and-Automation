@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A B Electric and Automation</title>
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+    <!-- Main Header -->
+    <header>
+        <div class="d-lg-block d-none">
+            <div id="topBar" class=" d-flex align-items-center ">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="offers">
+                        <p>20% Off On All Products!</p>
+                    </div>
+                    <ul class="quick-menu d-flex align-items-center">
+                        <li class="acctAnCur">
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="uil:user" width="20" height="20"></iconify-icon>
+                                </span>
+                                <span>Accout</span>
+                            </a>
+                        </li>
+                        <li class="curency d-flex align-items-center">
+                            <span>Curency :</span>
+                            <select name="curency" id="">
+                                <option value="USA">USA</option>
+                                <option value="USA">BNE</option>
+                                <option value="USA">IN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container position-relative">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-2 col-6">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img class="img-fluid" src="./assets/images/logo/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 d-lg-block d-none">
+                        <ul class="main-menu d-flex align-items-center justify-content-center">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li class="category">
+                                <a href="#">Our Categories
+                                    <div class="iconify-icon">
+                                        <iconify-icon icon="ri:arrow-down-s-line" width="20" height="20"></iconify-icon>
+                                    </div>
+                                </a>
+                                <ul class="subCategory">
+                                    <li><a href="#">Category 1</a></li>
+                                    <li><a href="#">Category 2</a></li>
+                                    <li><a href="#">Category 3</a></li>
+                                    <li><a href="#">Category 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 quick-access col-6">
+                        <ul class=" d-flex align-items-center justify-content-end">
+                            <li id="searchBtn">
+                                <span class="iconify-icon">
+                                    <iconify-icon class="searchIcon" icon="lucide:search" width="30"
+                                        height="30"></iconify-icon>
+                                    <iconify-icon class="closeIcon d-none" icon="material-symbols:close" width="30"
+                                        height="30"></iconify-icon>
+                                </span>
+                            </li>
+                            <li class="cartBox d-flex align-items-center">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="mdi:cart-outline" width="30" height="30"></iconify-icon>
+                                </span>
+                                <span class="d-lg-block d-none">
+                                    <p class="qty">0 Items</p>
+                                    <p class="total">20.00 USD</p>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- search popup -->
+                <div class="searchBox ">
+                    <form action="">
+                        <div class="search-input">
+                            <input type="text" name="search" placeholder="Find your favorite products...">
+                            <button>
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="lucide:search" width="30" height="30"></iconify-icon>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Cart Overlay -->
+            <div class="cartOverlay "></div>
+
+            <!-- Cart Popup -->
+            <div class="cartPopup">
+                <div class="cart">
+                    <!-- Header -->
+                    <div class="cart-header d-flex justify-content-between align-items-center">
+                        <h5 class="m-0">Your Cart</h5>
+                        <button class="closeBtn">
+                            <iconify-icon icon="material-symbols:close-rounded" width="24" height="24"></iconify-icon>
+                        </button>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="cart-body">
+                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                    alt="Product">
+                                <div>
+                                    <p class="mb-1 fw-semibold">Product Name</p>
+                                    <small class="text-muted">1 × $20</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">$20</span>
+                        </div>
+
+                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                    alt="Product">
+                                <div>
+                                    <p class="mb-1 fw-semibold">Another Item</p>
+                                    <small class="text-muted">2 × $15</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">$30</span>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="cart-footer">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="fw-semibold">Subtotal:</span>
+                            <span class="fw-bold">$50</span>
+                        </div>
+                        <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner  -->
+    <section id="banner">
+        <div class="bannerBox">
+            <div class="Banner_items d-flex align-items-center"
+                style="background-image: url(../assets/images/banner-image/banner-1.webp);">
+                <div class="container">
+                    <div class="col-lg-7">
+                        <h5 class="mb-2">We are committed to Provide</h5>
+                        <h2>A B ELECTRIC & AUTOMATION</h2>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque
+                            iusto, ducimus totam
+                            aliquam enim ipsam dignissimos porro, quam similique magni tenetur eos? Exercitationem
+                            consequuntur ipsam vitae eligendi alias odio.</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Banner_items d-flex align-items-center"
+                style="background-image: url(./assets/images/banner-image/banner-2.avif);">
+                <div class="container">
+                    <div class="col-lg-7">
+                        <h5>We are committed to Provide</h5>
+                        <h2>A B ELECTRIC & AUTOMATION</h2>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque
+                            iusto, ducimus totam
+                            aliquam enim ipsam dignissimos porro, quam similique magni tenetur eos? Exercitationem
+                            consequuntur ipsam vitae eligendi alias odio.</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Banner_items d-flex align-items-center"
+                style="background-image: url(./assets/images/banner-image/banner-3.jpg);">
+                <div class="container">
+                    <div class="col-lg-7">
+                        <h5>We are committed to Provide</h5>
+                        <h2>A B ELECTRIC & AUTOMATION</h2>
+                        <p class="my-3">Laboriosam itaque
+                            iusto, ducimus totam
+                            aliquam enim ipsam dignissimos porro, quam similique magni tenetur eos? Exercitationem
+                            consequuntur ipsam vitae eligendi alias odio.</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About  -->
+    <section id="about">
+        <div class="container">
+            <div class="title">
+                <h3 class="text-center">WELCOME TO <span> A B ELECTRIC & AUTOMATION</span></h3>
+            </div>
+            <div class="text-center">
+                <p class="">One of our (A B ELECTRIC & AUTOMATION) main business practices is in
+                    the
+                    range
+                    of Marine Equipment supply and export
+                    worldwide. Chittagong is one of the world’s largest shipbreaking yards where demolishing many
+                    vessels
+                    every month hence,
+                    Chittagong has become well known to the world shipping market as a great source of new ship spare
+                    parts
+                    & used reusable
+                    ship machinery & equipment. So, we took the opportunity to enter in ship’s equipment trading
+                    business
+                    globally and
+                    earned entire satisfaction from our worldwide customers by supplying the best quality equipment at a
+                    competitive price.
+                    We have a vast stock of ship machinery, equipment, and spare parts. <br><br>
+                    We Want To Grow Our Business By Gaining Respectable Client Satisfaction. Customer Satisfaction Is
+                    Our
+                    Top Priority. We
+                    obtain ship spare parts & good quality re-usable ship equipment like the bellow attachment photos.
+                    Please take a look
+                    and choice your product’s most affordable price.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured-P">
+        <div class="container">
+            <div class="title ">
+                <h3 class="text-center">OUR <span> FEATURED PRODUCTS</span></h3>
+            </div>
+            <div class="responsive">
+                <div class="items">
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client Satisfaction</a>
+                            <div class="price">$889.9<span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">
+                                        <span class="iconify-icon">
+                                            <iconify-icon icon="mdi:cart-outline" width="20" height="20"></iconify-icon>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client Satisfaction</a>
+                            <div class="price">$889.9<span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client Satisfaction</a>
+                            <div class="price">$889.9<span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client Satisfaction</a>
+                            <div class="price">$889.9<span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client Satisfaction</a>
+                            <div class="price">$889.9<span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="./assets/images/products/product-1.png" alt="">
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client Satisfaction</a>
+                            <div class="price">$889.9<span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Products -->
+    <section id="our-product">
+        <div class="container">
+            <div class="title">
+                <h3 class="text-center">OUR <span> FEATURED PRODUCTS</span></h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9 <span class="old-price">$1000.0</span></div>
+                            <div class="row align-items-center ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">
+                                        <span class="iconify-icon">
+                                            <iconify-icon icon="mdi:cart-outline" width="20" height="20"></iconify-icon>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9</div>
+                            <div class="row align-items-center">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9 <span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9 <span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9 <span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9 <span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9 <span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 my-3">
+                    <div class="items">
+                        <div class="imgBox">
+                            <a href="">
+                                <img src="./assets/images/products/product-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client
+                                Satisfaction</a>
+                            <div class="price">$889.9 <span class="old-price">$1000.0</span></div>
+                            <div class="row ">
+                                <div class="reting col-lg-6 col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="noto:star"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart col-lg-6 col-12">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all text-center">
+                <a href="#">See more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supplying details -->
+    <section id="supplying">
+        <div class="container">
+            <div class="global text-center">
+                <img class="img-fluid" src="./assets/images/world.png" alt="">
+                <h3>Supplying All Around The Global</h3>
+                <p class="col-lg-5 col-12">Whether you need spare parts delivered to a main port, a small port, or the
+                    middle of
+                    the ocean Safia
+                    Marine Supplier is
+                    ready and capable of onboarding wherever required.</p>
+                <a href="#">GET A FREE QOUTE</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- our happy customer -->
+    <section id="review">
+        <div class="container">
+            <div class="title ">
+                <h3 class="text-center">OUR <span> HAPPY CUSTOMER</span></h3>
+            </div>
+            <div class="review">
+                <div class="review-items">
+                    <div class="review-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ut enim ad minim
+                            veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident.</p>
+                    </div>
+                    <div class="reviewer-image">
+                        <img src="./assets/images/review-img/reviewer-1.png" alt="">
+                    </div>
+                </div>
+                <div class="review-items">
+                    <div class="review-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ut enim ad minim
+                            veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident.</p>
+                    </div>
+                    <div class="reviewer-image">
+                        <img src="./assets/images/review-img/reviewer-1.png" alt="">
+                    </div>
+                </div>
+                <div class="review-items">
+                    <div class="review-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ut enim ad minim
+                            veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident.</p>
+                    </div>
+                    <div class="reviewer-image">
+                        <img src="./assets/images/review-img/reviewer-1.png" alt="">
+                    </div>
+                </div>
+                <div class="review-items">
+                    <div class="review-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ut enim ad minim
+                            veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident.</p>
+                    </div>
+                    <div class="reviewer-image text-center">
+                        <img src="./assets/images/review-img/reviewer-1.png" alt="">
+                        <span>Sarah M.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-4 mt-3 mt-lg-0">
+                    <div class="logo">
+                        <a href="">
+                            <img src="./assets/images/logo/logo.png" alt="">
+                        </a>
+                    </div>
+                    <p>A B ELECTRIC & AUTOMATION is one of the leading exporters since 2016 for the supply of Reusable
+                        Marine Machinery and
+                        Spare Parts Obtained from World’s one of the largest ship-breaking yard situated on the of
+                        Bangladesh called as
+                        “CHITTAGONG SHIP BREAKING YARD”</p>
+                    <ul class="d-flex align-items-center shoshalmedia">
+                        <li><a href="#"><iconify-icon icon="flowbite:facebook-solid"></iconify-icon></a></li>
+                        <li><a href="#"><iconify-icon icon="basil:youtube-outline"></iconify-icon></a></li>
+                        <li><a href="#"><iconify-icon icon="ic:baseline-whatsapp"></iconify-icon></a></li>
+                        <li><a href="#"><iconify-icon icon="flowbite:google-solid"></iconify-icon></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4  important-links mt-3 mt-lg-0">
+                    <h4>Important Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mt-3 mt-lg-0">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146212.15216744455!2d91.73663616385171!3d22.357533369258274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram!5e1!3m2!1sen!2sbd!4v1757341681637!5m2!1sen!2sbd"
+                        width="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright ">
+            <p>&copy; 2025 A B Electric & Automation | Developed by <a href="#">TechItNext</a></p>
+
+        </div>
+    </footer>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/iconify-icon.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
