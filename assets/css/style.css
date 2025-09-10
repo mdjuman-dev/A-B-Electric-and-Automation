@@ -189,7 +189,9 @@ nav .main-menu li a {
   display: inline-block;
   transition: color 0.3s ease;
 }
-
+.mobile-menu iconify-icon {
+  font-size: 30px;
+}
 nav .main-menu li a::after {
   position: absolute;
   content: '';
@@ -202,7 +204,7 @@ nav .main-menu li a::after {
 }
 
 nav .main-menu li a:hover {
-  color: var(--primary-hover);
+  color: var(--white);
 }
 
 nav .main-menu li a:hover::after {

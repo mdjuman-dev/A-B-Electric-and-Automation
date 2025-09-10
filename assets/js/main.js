@@ -9,23 +9,18 @@ $(document).ready(function () {
   });
 
   $('#searchBtn').on('click', function () {
-    // Toggle the search box
     $('.searchBox').toggleClass('active');
 
-    // Switch icons instantly
     if ($('.searchBox').hasClass('active')) {
-      // Show close icon, hide search icon
       $('#searchBtn .closeIcon').removeClass('d-none').addClass('d-block');
       $('#searchBtn .searchIcon').addClass('d-none');
     } else {
-      // Show search icon, hide close icon
       $('#searchBtn .closeIcon').addClass('d-none').removeClass('d-block');
       $('#searchBtn .searchIcon').removeClass('d-none');
     }
   });
 
   $('.bannerBox').on('init', function (event, slick) {
-    // প্রথম স্লাইডে active যোগ করবো
     $('.Banner_items').eq(0).addClass('active');
   });
 
@@ -34,22 +29,21 @@ $(document).ready(function () {
     arrows: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    fade: true, // সুন্দর fade effect
+    fade: true,
   });
 
   $('.bannerBox').on(
     'beforeChange',
     function (event, slick, currentSlide, nextSlide) {
-      $('.Banner_items').removeClass('active'); // আগের slide থেকে remove
+      $('.Banner_items').removeClass('active');
     }
   );
 
   $('.bannerBox').on('afterChange', function (event, slick, currentSlide) {
-    $('.Banner_items').eq(currentSlide).addClass('active'); // নতুন slide এ add
+    $('.Banner_items').eq(currentSlide).addClass('active');
   });
 
   // Card popup
-
   $('.cartBox').on('click', function () {
     $('.cartPopup').addClass('active');
     $('.cartOverlay').addClass('active');
@@ -61,15 +55,15 @@ $(document).ready(function () {
 
   // fetured product
   $('.responsive').slick({
-    dots: true,
+    dots: false,
     autoplay: true,
     infinite: true,
     speed: 300,
     slidesToShow: 4,
-    slidesToScroll: 1, // scroll একসাথে 1 হলে ভালো লাগে
+    slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1400, // <= 1024px
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -78,7 +72,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 1024, // <= 1024px
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -87,14 +81,14 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 768, // <= 768px (tablet)
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // <= 480px (mobile)
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -104,17 +98,16 @@ $(document).ready(function () {
   });
 
   //review slidar
- 
   $('.review').slick({
-    dots: true,
+    dots: false,
     autoplay: true,
     infinite: true,
     speed: 300,
     slidesToShow: 3,
-    slidesToScroll: 1, // scroll একসাথে 1 হলে ভালো লাগে
+    slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1400, // <= 1024px
+        breakpoint: 1400,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -123,7 +116,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 1024, // <= 1024px
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -132,14 +125,14 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 768, // <= 768px (tablet)
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // <= 480px (mobile)
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
