@@ -15,7 +15,7 @@
 <body>
     <!-- Main Header -->
     <header>
-        <div class="d-lg-block d-none">
+        <div class="d-lg-block d-none topBar">
             <div id="topBar" class="d-flex align-items-center">
                 <div class="container d-flex justify-content-between align-items-center">
                     <div class="offers">
@@ -120,59 +120,59 @@
                     </form>
                 </div>
             </div>
-            <!-- Cart Overlay -->
-            <div class="cartOverlay"></div>
 
-            <!-- Cart Popup -->
-            <div class="cartPopup">
-                <div class="cart">
-                    <!-- Header -->
-                    <div class="cart-header d-flex justify-content-between align-items-center">
-                        <h5 class="m-0">Your Cart</h5>
-                        <button class="closeBtn">
-                            <iconify-icon icon="material-symbols:close-rounded" width="24" height="24"></iconify-icon>
-                        </button>
+        </nav>
+        <!-- Cart Overlay -->
+        <div class="cartOverlay"></div>
+
+        <!-- Cart Popup -->
+        <div class="cartPopup">
+            <div class="cart">
+                <!-- Header -->
+                <div class="cart-header d-flex justify-content-between align-items-center">
+                    <h5 class="m-0">Your Cart</h5>
+                    <button class="closeBtn">
+                        <iconify-icon icon="material-symbols:close-rounded" width="24" height="24"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Body -->
+                <div class="cart-body">
+                    <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                alt="Product" />
+                            <div>
+                                <p class="mb-1 fw-semibold">Product Name</p>
+                                <small class="text-muted">1 × $20</small>
+                            </div>
+                        </div>
+                        <span class="fw-bold">$20</span>
                     </div>
 
-                    <!-- Body -->
-                    <div class="cart-body">
-                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
-                                    alt="Product" />
-                                <div>
-                                    <p class="mb-1 fw-semibold">Product Name</p>
-                                    <small class="text-muted">1 × $20</small>
-                                </div>
+                    <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                alt="Product" />
+                            <div>
+                                <p class="mb-1 fw-semibold">Another Item</p>
+                                <small class="text-muted">2 × $15</small>
                             </div>
-                            <span class="fw-bold">$20</span>
                         </div>
-
-                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
-                                    alt="Product" />
-                                <div>
-                                    <p class="mb-1 fw-semibold">Another Item</p>
-                                    <small class="text-muted">2 × $15</small>
-                                </div>
-                            </div>
-                            <span class="fw-bold">$30</span>
-                        </div>
-                    </div>
-
-                    <!-- Footer -->
-                    <div class="cart-footer">
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="fw-semibold">Subtotal:</span>
-                            <span class="fw-bold">$50</span>
-                        </div>
-                        <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+                        <span class="fw-bold">$30</span>
                     </div>
                 </div>
-            </div>
-        </nav>
 
+                <!-- Footer -->
+                <div class="cart-footer">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-semibold">Subtotal:</span>
+                        <span class="fw-bold">$50</span>
+                    </div>
+                    <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -192,13 +192,788 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <section id="shopPage">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3 filters my-2 d-lg-block d-none">
+                        <!-- Categories -->
+                        <div class="filter-box">
+                            <h4 class="filter-title">Categories</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <a href="#" class="toggle">
+                                        Wheels and Tires <span>(3)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle">
+                                        Variables <span>(5)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle">
+                                        Repair Parts <span>(18)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle">
+                                        Performance Parts <span>(9)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle">
+                                        Lighting <span>(5)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="filter-box">
+                            <h4 class="filter-title">Price</h4>
+                            <form action="">
+                                <div class="slider-container">
+                                    <div class="slider-track"></div>
+                                    <input type="range" min="0" max="100000" value="0" id="minRange">
+                                    <input type="range" min="0" max="100000" value="100000" id="maxRange">
+                                </div>
+                                <div class="d-flex align-items-center mt-3">
+                                    <button type="button" class="btn btn-dark btn-sm">Filter</button>
+                                    <span class="ms-2">
+                                        Price: <span id="minValue">0</span>৳ - <span id="maxValue">100000</span>৳
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Department -->
+                        <div class="filter-box">
+                            <h4 class="filter-title">Department</h4>
+                            <ul class="filter-list">
+                                <li><label><input type="checkbox"> Accessories <span>(4)</span></label></li>
+                                <li><label><input type="checkbox"> Brakes <span>(2)</span></label></li>
+                                <li><label><input type="checkbox"> Car Body <span>(6)</span></label></li>
+                                <li><label><input type="checkbox"> Car Lights <span>(4)</span></label></li>
+                                <li><label><input type="checkbox"> Engine Parts <span>(4)</span></label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Car Type -->
+                        <div class="filter-box">
+                            <h4 class="filter-title">Car Type</h4>
+                            <ul class="filter-list">
+                                <li><label><input type="checkbox"> 4 Wheel Drive <span>(8)</span></label></li>
+                                <li><label><input type="checkbox"> Coupe <span>(7)</span></label></li>
+                                <li><label><input type="checkbox"> Hatchback <span>(4)</span></label></li>
+                                <li><label><input type="checkbox"> Sedan <span>(8)</span></label></li>
+                                <li><label><input type="checkbox"> SUV <span>(11)</span></label></li>
+                            </ul>
+                        </div>
 
                     </div>
-                    <div class="col-lg-8"></div>
+
+
+                    <div class="col-lg-9 products col-12">
+                        <div class="row align-items-center my-3 shop-header">
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <h2 class="shop-title">Shop</h2>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6 text-end">
+                                <select class="form-select sort-select">
+                                    <option value="">Sort by popularity</option>
+                                    <option value="">Sort by latest</option>
+                                    <option value="">Sort by price: low to high</option>
+                                    <option value="">Sort by price: high to low</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- products -->
+                        <div class="row">
+                            <div class="col-lg-4 col-6 my-2">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="reting my-2">
+                                            <ul class="d-flex align-items-center">
+                                                <li>
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon class="starColor"
+                                                            icon="weui:star-filled"></iconify-icon>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon class="starColor"
+                                                            icon="weui:star-filled"></iconify-icon>
+                                                    </span>
+                                                </li>
+                                                <span class="pe-2 mt-1 ms-2 total-reting">(4.5)</span>
+                                                <li class="mt-1">
+                                                    <span class="in-stock ">In Stock</span>
+                                                    <!-- <span class="out-stock">Out of Stock</span> -->
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="row align-items-center">
+                                            <div class="price  col-lg-7 col-12">
+                                                $889.9 <span class="old-price">$1000.0</span>
+                                            </div>
+                                            <div class="addToCart col-lg-5 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-2">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-2">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-2">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-2">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-3">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-3">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-3">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-3">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-3">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-3">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6 my-3">
+                                <div class="items">
+                                    <div class="imgBox">
+                                        <a href="">
+                                            <img src="./assets/images/products/product-1.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client
+                                            Satisfaction</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="reting col-lg-6 col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="addToCart col-lg-6 col-12">
+                                                <a href="#">
+                                                    <span class="iconify-icon">
+                                                        <iconify-icon icon="mdi:cart-outline" width="20"
+                                                            height="20"></iconify-icon>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,13 +1,13 @@
 /* Extra small devices (phones) */
 @media (max-width: 575.98px) {
   nav .searchBox {
-    width: 301px;
+    width: 369px;
   }
 }
 
 /* Small devices (landscape phones) */
 @media (max-width: 767.98px) {
-   .items {
+  .items {
     padding: 15px;
   }
   .items .imgBox {
@@ -31,7 +31,7 @@
 /* Medium devices (tablets) */
 @media (max-width: 991.98px) {
   nav .searchBox {
-    right: 10%;
+    right: 7%;
     top: 66px;
   }
   nav .main-menu li {
@@ -39,6 +39,9 @@
   }
   #banner {
     margin-top: 0;
+  }
+  #breadcrumb {
+    margin-top: 74px;
   }
 }
 

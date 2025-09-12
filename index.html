@@ -15,7 +15,7 @@
 <body>
     <!-- Main Header -->
     <header>
-        <div class="d-lg-block d-none">
+        <div class="d-lg-block d-none topBar">
             <div id="topBar" class="d-flex align-items-center">
                 <div class="container d-flex justify-content-between align-items-center">
                     <div class="offers">
@@ -120,64 +120,65 @@
                     </form>
                 </div>
             </div>
-            <!-- Cart Overlay -->
-            <div class="cartOverlay"></div>
 
-            <!-- Cart Popup -->
-            <div class="cartPopup">
-                <div class="cart">
-                    <!-- Header -->
-                    <div class="cart-header d-flex justify-content-between align-items-center">
-                        <h5 class="m-0">Your Cart</h5>
-                        <button class="closeBtn">
-                            <iconify-icon icon="material-symbols:close-rounded" width="24" height="24"></iconify-icon>
-                        </button>
+        </nav>
+        <!-- Cart Overlay -->
+        <div class="cartOverlay"></div>
+
+        <!-- Cart Popup -->
+        <div class="cartPopup">
+            <div class="cart">
+                <!-- Header -->
+                <div class="cart-header d-flex justify-content-between align-items-center">
+                    <h5 class="m-0">Your Cart</h5>
+                    <button class="closeBtn">
+                        <iconify-icon icon="material-symbols:close-rounded" width="24" height="24"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Body -->
+                <div class="cart-body">
+                    <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                alt="Product" />
+                            <div>
+                                <p class="mb-1 fw-semibold">Product Name</p>
+                                <small class="text-muted">1 × $20</small>
+                            </div>
+                        </div>
+                        <span class="fw-bold">$20</span>
                     </div>
 
-                    <!-- Body -->
-                    <div class="cart-body">
-                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
-                                    alt="Product" />
-                                <div>
-                                    <p class="mb-1 fw-semibold">Product Name</p>
-                                    <small class="text-muted">1 × $20</small>
-                                </div>
+                    <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                alt="Product" />
+                            <div>
+                                <p class="mb-1 fw-semibold">Another Item</p>
+                                <small class="text-muted">2 × $15</small>
                             </div>
-                            <span class="fw-bold">$20</span>
                         </div>
-
-                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
-                                    alt="Product" />
-                                <div>
-                                    <p class="mb-1 fw-semibold">Another Item</p>
-                                    <small class="text-muted">2 × $15</small>
-                                </div>
-                            </div>
-                            <span class="fw-bold">$30</span>
-                        </div>
-                    </div>
-
-                    <!-- Footer -->
-                    <div class="cart-footer">
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="fw-semibold">Subtotal:</span>
-                            <span class="fw-bold">$50</span>
-                        </div>
-                        <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+                        <span class="fw-bold">$30</span>
                     </div>
                 </div>
-            </div>
-        </nav>
 
+                <!-- Footer -->
+                <div class="cart-footer">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-semibold">Subtotal:</span>
+                        <span class="fw-bold">$50</span>
+                    </div>
+                    <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
         <!-- Banner  -->
         <section id="banner">
+            <div class="overlay"></div>
             <div class="bannerBox">
                 <div class="Banner_items d-flex align-items-center" style="
                 background-image: url(../assets/images/banner-image/banner-1.webp);

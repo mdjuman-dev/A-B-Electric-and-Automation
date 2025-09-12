@@ -1,10 +1,11 @@
 $(document).ready(function () {
-  window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('header');
-    if (window.scrollY > 200) {
-      navbar.classList.add('scrolled');
+  $(document).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $('nav').addClass('scrolled');
+      $('.topBar').addClass('none');
     } else {
-      navbar.classList.remove('scrolled');
+      $('nav').removeClass('scrolled');
+      $('.topBar').removeClass('none');
     }
   });
 
@@ -140,4 +141,41 @@ $(document).ready(function () {
       },
     ],
   });
+
+  // Shop filtar price range
+  let minGap = 50;
+
+  function updateTrack() {
+    let minVal = parseInt($('#minRange').val());
+    let maxVal = parseInt($('#maxRange').val());
+
+    let percent1 = (minVal / 1000) * 100;
+    let percent2 = (maxVal / 1000) * 100;
+
+    $('.slider-track::before');
+
+    $('.slider-track').css(
+      'background',
+      `linear-gradient(to right, #ddd ${percent1}%, #28acd5 ${percent1}%, #28acd5 ${percent2}%, #ddd ${percent2}%)`
+    );
+
+    $('#minValue').text(minVal);
+    $('#maxValue').text(maxVal);
+  }
+
+  $('#minRange, #maxRange').on('input', function () {
+    let minVal = parseInt($('#minRange').val());
+    let maxVal = parseInt($('#maxRange').val());
+
+    if (maxVal - minVal < minGap) {
+      if ($(this).attr('id') === 'minRange') {
+        $('#minRange').val(maxVal - minGap);
+      } else {
+        $('#maxRange').val(minVal + minGap);
+      }
+    }
+    updateTrack();
+  });
+
+  updateTrack();
 });
