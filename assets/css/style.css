@@ -93,9 +93,6 @@ body {
 
 /***** Header Section *****/
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
   transition: background-color 0.3s ease;
@@ -104,6 +101,9 @@ header {
 
 header.scrolled {
   background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 #topBar {
@@ -426,7 +426,7 @@ nav .searchBox.active {
 
 /***** Banner Section *****/
 #banner {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   width: 100%;
   height: calc(100vh - 50px);
   position: relative;
@@ -927,3 +927,19 @@ footer .copyright p a:hover {
   color: var(--primary-hover);
 }
 /***** End Footer Section *****/
+
+/*! Shop Page Section *****/
+
+#breadcrumb {
+  background: var(--primary);
+  padding: 10px;
+}
+#breadcrumb ul a {
+  color: var(--black);
+  font-size: 18px;
+}
+#breadcrumb ul iconify-icon {
+  margin: 0 10px;
+  color: var(--black);
+}
+/*! End Shop Page Section *****/
