@@ -99,7 +99,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   transition: background-color 0.3s ease;
   background-color: transparent;
 }
@@ -159,7 +159,7 @@ header {
   font-family: var(--font-family);
 } */
 .topBar {
-  max-height: 60px; 
+  max-height: 60px;
   opacity: 1;
   overflow: hidden;
   transition: 0.6s ease-in-out;
@@ -212,6 +212,9 @@ nav .main-menu li a {
   position: relative;
   display: inline-block;
   transition: color 0.3s ease;
+}
+nav .main-menu li a.active {
+  color: var(--primary);
 }
 .mobile-menu iconify-icon {
   font-size: 30px;
@@ -446,6 +449,164 @@ nav .searchBox.active {
 
 /***** End Cart popup Section *****/
 
+/***** Menu Section *****/
+.menuOverley {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  cursor: pointer;
+}
+.menuPopup {
+  position: absolute;
+  width: 450px;
+  height: 100vh;
+  background: var(--white);
+  right: 0;
+  top: 0;
+  z-index: 102;
+}
+
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  cursor: pointer;
+}
+.menuOverlay.active {
+  display: block;
+}
+
+.menuPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0 12px 12px 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  transform: translateX(-100%);
+}
+.menuPopup.active {
+  transform: translateX(0%);
+}
+.menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.menu-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.menu-body {
+  flex: 1;
+  overflow-y: auto;
+  margin: 15px 0;
+}
+/* Main Menu Base */
+.main-menu {
+  list-style: none;
+  margin: 0;
+}
+
+.main-menu li {
+  position: relative;
+}
+
+.main-menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.main-menu a:hover,
+.main-menu a.active {
+  color: #28acd5;
+}
+
+/* Dropdown Category */
+.main-menu .category > a {
+  cursor: pointer;
+}
+
+.main-menu .category .iconify-icon {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.main-menu .category:hover .iconify-icon {
+  transform: rotate(180deg);
+}
+
+/* Sub Category */
+.subCategory {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.subCategory li {
+  padding: 0;
+}
+
+.subCategory li a {
+  display: block;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.subCategory li a:hover {
+  background: #f5f5f5;
+  color: #28acd5;
+  padding-left: 20px;
+}
+
+/* Show on Hover */
+.category:hover .subCategory {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+.closeBtn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/***** End Menu Section *****/
+
 /***** End Header Section *****/
 
 /***** Banner Section *****/
@@ -461,12 +622,6 @@ nav .searchBox.active {
   left: 0;
   width: 100%;
   height: 30%;
-  background: var(--black) 000;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(209, 205, 205, 1) 100%
-  );
   opacity: 0.3;
   z-index: 150;
 }
@@ -1041,9 +1196,10 @@ footer .copyright p a:hover {
 
 .filters {
   background: var(--white);
-  padding: 20px;
   border-radius: 8px;
   height: 100%;
+  position: sticky;
+  top: 90px;
 }
 
 .filter-box {
@@ -1158,4 +1314,47 @@ footer .copyright p a:hover {
   right: 0;
 }
 
+.filter-close {
+  padding: 10px;
+}
+.filter-overley {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0000009d;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.filter-overley.active {
+  visibility: visible;
+  opacity: 1;
+}
+.filter-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0 12px 12px 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
+  padding: 20px;
+  z-index: 100;
+  overflow-y: auto;
+}
+.filter-header {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--ddd);
+}
+
+.filter-popup.active {
+  transform: translateX(-0%);
+}
 /*! End Shop Page Section *****/

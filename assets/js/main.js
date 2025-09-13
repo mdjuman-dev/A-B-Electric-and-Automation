@@ -1,6 +1,7 @@
 $(document).ready(function () {
+  //menu scroll
   $(document).scroll(function () {
-    if ($(this).scrollTop() > 200) {
+    if ($(this).scrollTop() > 150) {
       $('nav').addClass('scrolled');
       $('.topBar').addClass('none');
     } else {
@@ -9,6 +10,7 @@ $(document).ready(function () {
     }
   });
 
+  //
   $('#searchBtn').on('click', function () {
     $('.searchBox').toggleClass('active');
 
@@ -44,6 +46,15 @@ $(document).ready(function () {
     $('.Banner_items').eq(currentSlide).addClass('active');
   });
 
+  // Menu popup
+  $('.menuBox').on('click', function () {
+    $('.menuPopup').addClass('active');
+    $('.menuOverlay').addClass('active');
+  });
+  $('.menuOverlay,.closeBtn').on('click', function () {
+    $('.menuPopup').removeClass('active');
+    $('.menuOverlay').removeClass('active');
+  });
   // Card popup
   $('.cartBox').on('click', function () {
     $('.cartPopup').addClass('active');
@@ -143,39 +154,58 @@ $(document).ready(function () {
   });
 
   // Shop filtar price range
-  let minGap = 50;
+  let minGap = 500;
 
-  function updateTrack() {
-    let minVal = parseInt($('#minRange').val());
-    let maxVal = parseInt($('#maxRange').val());
+  function updateTrack($box) {
+    let minVal = parseInt($box.find('.minRange').val());
+    let maxVal = parseInt($box.find('.maxRange').val());
+    let maxLimit = parseInt($box.find('.maxRange').attr('max'));
 
-    let percent1 = (minVal / 1000) * 100;
-    let percent2 = (maxVal / 1000) * 100;
+    let percent1 = (minVal / maxLimit) * 100;
+    let percent2 = (maxVal / maxLimit) * 100;
 
-    $('.slider-track::before');
+    $box
+      .find('.slider-track')
+      .css(
+        'background',
+        `linear-gradient(to right, #ddd ${percent1}%, #28acd5 ${percent1}%, #28acd5 ${percent2}%, #ddd ${percent2}%)`
+      );
 
-    $('.slider-track').css(
-      'background',
-      `linear-gradient(to right, #ddd ${percent1}%, #28acd5 ${percent1}%, #28acd5 ${percent2}%, #ddd ${percent2}%)`
-    );
-
-    $('#minValue').text(minVal);
-    $('#maxValue').text(maxVal);
+    $box.find('.minValue').text(minVal);
+    $box.find('.maxValue').text(maxVal);
   }
 
-  $('#minRange, #maxRange').on('input', function () {
-    let minVal = parseInt($('#minRange').val());
-    let maxVal = parseInt($('#maxRange').val());
+  // Multiple filter-box support
+  $('.filter-box').each(function () {
+    let $box = $(this);
 
-    if (maxVal - minVal < minGap) {
-      if ($(this).attr('id') === 'minRange') {
-        $('#minRange').val(maxVal - minGap);
-      } else {
-        $('#maxRange').val(minVal + minGap);
+    $box.find('.minRange, .maxRange').on('input', function () {
+      let minVal = parseInt($box.find('.minRange').val());
+      let maxVal = parseInt($box.find('.maxRange').val());
+
+      if (maxVal - minVal < minGap) {
+        if ($(this).hasClass('minRange')) {
+          $box.find('.minRange').val(maxVal - minGap);
+        } else {
+          $box.find('.maxRange').val(minVal + minGap);
+        }
       }
-    }
-    updateTrack();
+
+      updateTrack($box);
+    });
+
+    // Initial update
+    updateTrack($box);
   });
 
-  updateTrack();
+  // shop filter popup
+  $('.filter-close').on('click', function () {
+    $('.filter-popup').addClass('active');
+    $('.filter-overley').addClass('active');
+  });
+
+  $('.filter-header .closeBtn,.filter-overley').on('click', function () {
+    $('.filter-popup').removeClass('active');
+    $('.filter-overley').removeClass('active');
+  });
 });

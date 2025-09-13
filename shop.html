@@ -46,7 +46,7 @@
             <div class="container position-relative">
                 <div class="row align-items-center justify-content-between">
                     <!-- mobile menu -->
-                    <div class="mobile-menu col-2 d-block d-lg-none">
+                    <div class="mobile-menu col-2 d-block d-lg-none menuBox">
                         <span class="iconify-icon">
                             <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
                         </span>
@@ -55,14 +55,14 @@
                     <div class="col-lg-2 col-6">
                         <div class="logo">
                             <a href="index.html">
-                                <img class="img-fluid" src="./assets/images/logo/logo.png" alt="Logo" />
+                                <img class="img-fluid" src="./assets/images/logo/logo1.png" alt="Logo" />
                             </a>
                         </div>
                     </div>
                     <!-- mein menu -->
                     <div class="col-lg-7 d-lg-block d-none">
                         <ul class="main-menu d-flex align-items-center justify-content-center">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html" class="active">Home</a></li>
                             <li><a href="shop.html">Shop</a></li>
                             <li class="category">
                                 <a href="#">Our Categories
@@ -93,7 +93,7 @@
                                 </span>
                             </li>
                             <div class="d-lg-block d-none">
-                                <li class="cartBox d-flex  align-items-center ">
+                                <li class="cartBox d-flex align-items-center">
                                     <span class="iconify-icon">
                                         <iconify-icon icon="mdi:cart-outline" width="30" height="30"></iconify-icon>
                                     </span>
@@ -120,12 +120,51 @@
                     </form>
                 </div>
             </div>
-
         </nav>
+        <!-- Menu Popup -->
+        <!-- Menu Overlay -->
+        <div class="menuOverlay"></div>
+        <div class="menuPopup">
+            <div class="menu">
+                <!-- Header -->
+                <div class="menu-header d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img width="150px" class="img-fluid" src="./assets/images/logo/logo1.png" alt="" />
+                    </div>
+                    <button class="closeBtn">
+                        <iconify-icon icon="material-symbols:close-rounded" width="25" height="25"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Body -->
+                <div class="menu-body">
+                    <div class="col-lg-7">
+                        <ul class="main-menu">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li class="category">
+                                <a href="#">Our Categories
+                                    <div class="iconify-icon">
+                                        <iconify-icon icon="ri:arrow-down-s-line" width="20" height="20"></iconify-icon>
+                                    </div>
+                                </a>
+                                <ul class="subCategory">
+                                    <li><a href="#">Category 1</a></li>
+                                    <li><a href="#">Category 2</a></li>
+                                    <li><a href="#">Category 3</a></li>
+                                    <li><a href="#">Category 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Cart Popup -->
         <!-- Cart Overlay -->
         <div class="cartOverlay"></div>
-
-        <!-- Cart Popup -->
         <div class="cartPopup">
             <div class="cart">
                 <!-- Header -->
@@ -179,12 +218,14 @@
         <section id="breadcrumb">
             <div class="container">
                 <ul class="d-flex align-items-center">
-                    <li><a href="">Home</a>
+                    <li>
+                        <a href="">Home</a>
                         <span class="iconify-icon">
                             <iconify-icon icon="ep:arrow-right"></iconify-icon>
                         </span>
                     </li>
-                    <li><a href="">Shop</a>
+                    <li>
+                        <a href="">Shop</a>
                         <span class="iconify-icon">
                             <iconify-icon icon="ep:arrow-right"></iconify-icon>
                         </span>
@@ -195,88 +236,240 @@
         <section id="shopPage">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 filters my-2 d-lg-block d-none">
-                        <!-- Categories -->
-                        <div class="filter-box">
-                            <h4 class="filter-title">Categories</h4>
-                            <ul class="filter-list">
-                                <li>
-                                    <a href="#" class="toggle">
-                                        Wheels and Tires <span>(3)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="toggle">
-                                        Variables <span>(5)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="toggle">
-                                        Repair Parts <span>(18)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="toggle">
-                                        Performance Parts <span>(9)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="toggle">
-                                        Lighting <span>(5)</span>
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="col-lg-3 filters">
+                        <div class="desktop d-none d-lg-block">
+                            <!-- Categories -->
+                            <div class="filter-box">
+                                <h4 class="filter-title">Categories</h4>
+                                <ul class="filter-list">
+                                    <li>
+                                        <a href="#" class="toggle">
+                                            Wheels and Tires <span>(3)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="toggle">
+                                            Variables <span>(5)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="toggle">
+                                            Repair Parts <span>(18)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="toggle">
+                                            Performance Parts <span>(9)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="toggle"> Lighting <span>(5)</span> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Price -->
+                            <div class="filter-box">
+                                <h4 class="filter-title">Price</h4>
+                                <form action="">
+                                    <div class="slider-container">
+                                        <div class="slider-track"></div>
+                                        <input type="range" min="0" max="100000" value="0" class="minRange" />
+                                        <input type="range" min="0" max="100000" value="100000" class="maxRange" />
+                                    </div>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <button type="button" class="btn btn-dark btn-sm">
+                                            Filter
+                                        </button>
+                                        <span class="ms-2">
+                                            Price: <span class="minValue">0</span>৳ -
+                                            <span class="maxValue">100000</span>৳
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Department -->
+                            <div class="filter-box">
+                                <h4 class="filter-title">Department</h4>
+                                <ul class="filter-list">
+                                    <li>
+                                        <label><input type="checkbox" /> Accessories
+                                            <span>(4)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> Brakes
+                                            <span>(2)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> Car Body
+                                            <span>(6)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> Car Lights
+                                            <span>(4)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> Engine Parts
+                                            <span>(4)</span></label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Car Type -->
+                            <div class="filter-box">
+                                <h4 class="filter-title">Car Type</h4>
+                                <ul class="filter-list">
+                                    <li>
+                                        <label><input type="checkbox" /> 4 Wheel Drive
+                                            <span>(8)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> Coupe <span>(7)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> Hatchback
+                                            <span>(4)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> Sedan <span>(8)</span></label>
+                                    </li>
+                                    <li>
+                                        <label><input type="checkbox" /> SUV <span>(11)</span></label>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!-- Price -->
-                        <div class="filter-box">
-                            <h4 class="filter-title">Price</h4>
-                            <form action="">
-                                <div class="slider-container">
-                                    <div class="slider-track"></div>
-                                    <input type="range" min="0" max="100000" value="0" id="minRange">
-                                    <input type="range" min="0" max="100000" value="100000" id="maxRange">
+                        <div class="mobile d-lg-none d-block">
+                            <!-- Filter popup -->
+                            <div class="filter-overley"></div>
+                            <div class="filter-popup">
+                                <div class="filter-header d-flex justify-content-between align-items-center">
+                                    <div class="logo">
+                                        <h3>Shop Filter</h3>
+                                    </div>
+                                    <button class="closeBtn">
+                                        <iconify-icon icon="material-symbols:close-rounded" width="25"
+                                            height="25"></iconify-icon>
+                                    </button>
                                 </div>
-                                <div class="d-flex align-items-center mt-3">
-                                    <button type="button" class="btn btn-dark btn-sm">Filter</button>
-                                    <span class="ms-2">
-                                        Price: <span id="minValue">0</span>৳ - <span id="maxValue">100000</span>৳
-                                    </span>
+
+
+                                <!-- Categories -->
+                                <div class="filter-box">
+                                    <h4 class="filter-title">Categories</h4>
+                                    <ul class="filter-list">
+                                        <li>
+                                            <a href="#" class="toggle">
+                                                Wheels and Tires <span>(3)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="toggle">
+                                                Variables <span>(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="toggle">
+                                                Repair Parts <span>(18)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="toggle">
+                                                Performance Parts <span>(9)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="toggle">
+                                                Lighting <span>(5)</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </form>
+                                <!-- Price -->
+                                <div class="filter-box">
+                                    <h4 class="filter-title">Price</h4>
+                                    <form action="">
+                                        <div class="slider-container">
+                                            <div class="slider-track"></div>
+                                            <input type="range" min="0" max="100000" value="0" class="minRange" />
+                                            <input type="range" min="0" max="100000" value="100000" class="maxRange" />
+                                        </div>
+                                        <div class="d-flex align-items-center mt-3">
+                                            <button type="button" class="btn btn-dark btn-sm">
+                                                Filter
+                                            </button>
+                                            <span class="ms-2">
+                                                Price: <span class="minValue">0</span>৳ -
+                                                <span class="maxValue">100000</span>৳
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Department -->
+                                <div class="filter-box">
+                                    <h4 class="filter-title">Department</h4>
+                                    <ul class="filter-list">
+                                        <li>
+                                            <label><input type="checkbox" /> Accessories
+                                                <span>(4)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> Brakes
+                                                <span>(2)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> Car Body
+                                                <span>(6)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> Car Lights
+                                                <span>(4)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> Engine Parts
+                                                <span>(4)</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Car Type -->
+                                <div class="filter-box">
+                                    <h4 class="filter-title">Car Type</h4>
+                                    <ul class="filter-list">
+                                        <li>
+                                            <label><input type="checkbox" /> 4 Wheel Drive
+                                                <span>(8)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> Coupe
+                                                <span>(7)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> Hatchback
+                                                <span>(4)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> Sedan
+                                                <span>(8)</span></label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" /> SUV
+                                                <span>(11)</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- Department -->
-                        <div class="filter-box">
-                            <h4 class="filter-title">Department</h4>
-                            <ul class="filter-list">
-                                <li><label><input type="checkbox"> Accessories <span>(4)</span></label></li>
-                                <li><label><input type="checkbox"> Brakes <span>(2)</span></label></li>
-                                <li><label><input type="checkbox"> Car Body <span>(6)</span></label></li>
-                                <li><label><input type="checkbox"> Car Lights <span>(4)</span></label></li>
-                                <li><label><input type="checkbox"> Engine Parts <span>(4)</span></label></li>
-                            </ul>
-                        </div>
-
-                        <!-- Car Type -->
-                        <div class="filter-box">
-                            <h4 class="filter-title">Car Type</h4>
-                            <ul class="filter-list">
-                                <li><label><input type="checkbox"> 4 Wheel Drive <span>(8)</span></label></li>
-                                <li><label><input type="checkbox"> Coupe <span>(7)</span></label></li>
-                                <li><label><input type="checkbox"> Hatchback <span>(4)</span></label></li>
-                                <li><label><input type="checkbox"> Sedan <span>(8)</span></label></li>
-                                <li><label><input type="checkbox"> SUV <span>(11)</span></label></li>
-                            </ul>
-                        </div>
-
                     </div>
 
-
                     <div class="col-lg-9 products col-12">
-                        <div class="row align-items-center my-3 shop-header">
+                        <div class="row align-items-center shop-header">
                             <div class="col-lg-6 col-md-6 col-6">
-                                <h2 class="shop-title">Shop</h2>
+                                <h2 class="shop-title d-none d-lg-block">Shop</h2>
+
+                                <div class="filter-icon d-lg-none d-block">
+                                    <span class="iconify-icon filter-close">
+                                        <iconify-icon icon="mage:filter" width="25" height="25"></iconify-icon>
+                                    </span>
+                                </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-6 text-end">
                                 <select class="form-select sort-select">
@@ -331,19 +524,16 @@
                                                 </li>
                                                 <span class="pe-2 mt-1 ms-2 total-reting">(4.5)</span>
                                                 <li class="mt-1">
-                                                    <span class="in-stock ">In Stock</span>
+                                                    <span class="in-stock">In Stock</span>
                                                     <!-- <span class="out-stock">Out of Stock</span> -->
                                                 </li>
                                             </ul>
                                         </div>
-
-
-
-                                        <div class="row align-items-center">
-                                            <div class="price  col-lg-7 col-12">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="price col-lg-7 col-8">
                                                 $889.9 <span class="old-price">$1000.0</span>
                                             </div>
-                                            <div class="addToCart col-lg-5 col-12">
+                                            <div class="addToCart col-lg-5 col-4">
                                                 <a href="#">
                                                     <span class="iconify-icon">
                                                         <iconify-icon icon="mdi:cart-outline" width="20"
@@ -971,7 +1161,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
