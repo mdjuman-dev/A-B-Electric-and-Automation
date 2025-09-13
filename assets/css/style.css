@@ -611,7 +611,7 @@ nav .searchBox.active {
 
 /***** Banner Section *****/
 #banner {
-  /* margin-top: 50px; */
+  margin-top: 50px;
   width: 100%;
   height: calc(100vh - 50px);
   position: relative;
