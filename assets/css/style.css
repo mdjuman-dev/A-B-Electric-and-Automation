@@ -285,16 +285,14 @@ nav .main-menu .category:hover .iconify-icon iconify-icon {
 
 nav .searchBox {
   position: absolute;
-  right: 12%; /* প্রয়োজনে adjust করো */
-  top: 86px; /* প্রয়োজনে adjust করো */
-  background: #fffffff2; /* subtle glass effect */
+  right: 12%;
+  top: 62px;
+  background: #fffffff2;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
-  /* box-shadow: 0 8px 20px var(--black); */
   padding: 10px 15px;
   z-index: 100;
-  width: 400px; /* adjust as needed */
+  width: 400px;
   display: flex;
   align-items: center;
   transform: translateY(10px);
@@ -302,7 +300,18 @@ nav .searchBox {
   opacity: 0;
   visibility: hidden;
 }
-
+.searchBox-overlay {
+  width: 100%;
+  height: 100vh;
+  background: #00000069;
+  display: none;
+  transition: 0.3s ease-in-out;
+  position: fixed;
+  left: 0;
+}
+.searchBox-overlay.active {
+  display: block;
+}
 nav .searchBox.active {
   transform: translateY(0px);
   opacity: 1;
@@ -584,11 +593,8 @@ nav .searchBox.active {
   color: #333;
   transition: all 0.3s ease;
 }
-
 .subCategory li a:hover {
-  background: #f5f5f5;
-  color: #28acd5;
-  padding-left: 20px;
+  color: var(--white);
 }
 
 /* Show on Hover */
@@ -604,6 +610,32 @@ nav .searchBox.active {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/***** Mobile Menu footer Section *****/
+.mobile-menu-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background: #ffffff;
+  z-index: 500;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0 20px;
+}
+.mobile-menu-footer ul {
+  height: 70px;
+}
+.mobile-menu-footer ul a {
+  padding: 13px;
+  color: var(--black);
+  border-radius: 50%;
+}
+.mobile-menu-footer ul a.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+/***** End Mobile Menu footer Section *****/
 
 /***** End Menu Section *****/
 
@@ -621,9 +653,13 @@ nav .searchBox.active {
   top: 0;
   left: 0;
   width: 100%;
-  height: 30%;
-  opacity: 0.3;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
   z-index: 150;
+}
+#banner .container {
+  z-index: 300;
 }
 .bannerBox {
   width: 100%;
@@ -911,17 +947,16 @@ nav .searchBox.active {
 
 /* Add to cart button */
 .items .addToCart {
-  text-align: end;
-  margin-top: 2px;
+  margin-top: 5px;
 }
 .items .addToCart a {
-  padding: 7px 10px;
-  font-size: 14px;
+  padding: 5px 15px;
+  font-size: 13px;
   background: var(--primary);
   border-radius: 20px;
   color: var(--white);
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 500;
   display: inline-block;
   transition: 0.3s;
 }
@@ -938,7 +973,7 @@ nav .searchBox.active {
 }
 .reting iconify-icon {
   color: var(--shadow);
-  font-size: 20px;
+  font-size: 15px;
   color: #ffa800;
 }
 .reting .starColor {
@@ -1200,6 +1235,7 @@ footer .copyright p a:hover {
   height: 100%;
   position: sticky;
   top: 90px;
+  padding: 20px;
 }
 
 .filter-box {
@@ -1358,3 +1394,165 @@ footer .copyright p a:hover {
   transform: translateX(-0%);
 }
 /*! End Shop Page Section *****/
+
+/*! Product details Section *****/
+.main-image {
+  border: 1px solid var(--shadow);
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-image .image img {
+  width: 90%;
+}
+.main-image .image {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.child-images {
+  margin-top: 10px;
+  border: 1px solid var(--shadow);
+  width: 100%;
+  height: 12vh;
+}
+.child-images .image-item {
+  width: 100%;
+  height: 12vh;
+  border: 1px solid var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.child-images .slick-next {
+  border-radius: 0;
+  right: 0px;
+  height: 12vh;
+  width: 30px;
+}
+.child-images .slick-prev {
+  border-radius: 0;
+  left: 0px;
+  height: 12vh;
+  width: 30px;
+}
+.details hr {
+  color: var(--shadow);
+}
+.details h1 {
+  font-size: 30px;
+  font-family: var(--font-family);
+  font-weight: 600;
+}
+.details ul li .total-reting {
+  font-size: 10px;
+  color: #aaa;
+  margin-left: 5px;
+}
+.details ul li {
+  padding: 0 10px;
+  border-right: 1px solid #aaaaaa;
+}
+.details ul li a {
+  color: var(--black);
+  transition: 0.3s;
+}
+.details ul li a:hover {
+  color: var(--primary);
+}
+.details ul .reting {
+  padding: 0 10px 0 0;
+}
+
+.details ul li:last-child {
+  border-right: none;
+}
+.details .price .new-price {
+  font-size: 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+}
+.details .price .old-price {
+  text-decoration: line-through;
+  color: #aaaaaa;
+  margin-left: 5px;
+}
+
+.details .availability {
+  font-size: 13px;
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+.details .availability span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  background: #28a745;
+  padding: 2px 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+  color: var(--white);
+}
+.details .quantity {
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+}
+
+.details .quantity .quantity-plus,
+.details .quantity .quantity-minus {
+  border: 1px solid var(--shadow);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.details .quantity .quantity-plus:hover,
+.details .quantity .quantity-minus:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.details .quantity .input-quantity {
+  flex: 1;
+  padding: 0;
+}
+
+.details .quantity .input-quantity input {
+  text-align: center;
+  border: 1px solid var(--shadow);
+  height: 40px;
+  width: 50px;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.details .addToCart {
+  border: none;
+  padding: 10px 20px;
+  background: var(--primary);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  color: var(--white);
+}
+.details .request-inquiry {
+  border: none;
+  padding: 10px 20px;
+  background: var(--primary);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  color: var(--white);
+}
+/*! End Product details Section *****/

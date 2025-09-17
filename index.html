@@ -52,10 +52,10 @@
                         </span>
                     </div>
                     <!-- logo -->
-                    <div class="col-lg-2 col-6">
+                    <div class="col-lg-2 col-6 text-center">
                         <div class="logo">
                             <a href="index.html">
-                                <img class="img-fluid" src="./assets/images/logo/logo1.png" alt="Logo" />
+                                <img width="150px" class="img-fluid" src="./assets/images/logo/logo1.png" alt="Logo" />
                             </a>
                         </div>
                     </div>
@@ -107,6 +107,7 @@
                     </div>
                 </div>
                 <!-- search popup -->
+                <div class="searchBox-overlay"></div>
                 <div class="searchBox">
                     <form>
                         <div class="search-input">
@@ -212,15 +213,53 @@
                 </div>
             </div>
         </div>
+
+
     </header>
+    <!-- mobile menu footer -->
+    <div class="mobile-menu-footer d-lg-none d-block">
+        <div class="container">
+
+            <ul class=" d-flex align-items-center justify-content-between">
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="ion:home-outline" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="shop.html">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="bi:shop" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="cartBox">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="mdi:cart-outline" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="solar:user-linear" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <main>
         <!-- Banner  -->
         <section id="banner">
             <div class="bannerBox">
                 <div class="Banner_items d-flex align-items-center" style="
-              background-image: url(../assets/images/banner-image/banner-1.webp);
-            ">
+              background-image: url(../assets/images/banner-image/banner-1.webp);  ">
+                    <div class="overlay"></div>
                     <div class="container">
                         <div class="col-lg-7">
                             <h5 class="mb-2">We are committed to Provide</h5>
@@ -238,6 +277,7 @@
                 <div class="Banner_items d-flex align-items-center" style="
               background-image: url(./assets/images/banner-image/banner-2.avif);
             ">
+                    <div class="overlay"></div>
                     <div class="container">
                         <div class="col-lg-7">
                             <h5>We are committed to Provide</h5>
@@ -255,6 +295,7 @@
                 <div class="Banner_items d-flex align-items-center" style="
               background-image: url(./assets/images/banner-image/banner-3.jpg);
             ">
+                    <div class="overlay"></div>
                     <div class="container">
                         <div class="col-lg-7">
                             <h5>We are committed to Provide</h5>
@@ -309,297 +350,304 @@
                 </div>
                 <div class="responsive">
                     <div class="items">
-                        <a href="#">
-                            <div class="imgBox">
+                        <div class="imgBox">
+                            <a href="">
                                 <img src="./assets/images/products/product-1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                            <div class="price">
+                                $889.9 <span class="old-price">$1000.0</span>
                             </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9<span class="old-price">$1000.0</span>
-                                </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">
+                            <div class="row ">
+                                <div class="reting col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
                                             <span class="iconify-icon">
-                                                <iconify-icon icon="mdi:cart-outline" width="20"
-                                                    height="20"></iconify-icon>
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
                                             </span>
-                                        </a>
-                                    </div>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="addToCart text-center col-12">
+                                    <a href="#">
+                                        Add To Cart
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="items">
-                        <a href="#">
-                            <div class="imgBox">
+                        <div class="imgBox">
+                            <a href="">
                                 <img src="./assets/images/products/product-1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                            <div class="price">
+                                $889.9 <span class="old-price">$1000.0</span>
                             </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9<span class="old-price">$1000.0</span>
+                            <div class="row ">
+                                <div class="reting col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
+                                <div class="addToCart text-center col-12">
+                                    <a href="#">
+                                        Add To Cart
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="items">
-                        <a href="">
-                            <div class="imgBox">
+                        <div class="imgBox">
+                            <a href="">
                                 <img src="./assets/images/products/product-1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                            <div class="price">
+                                $889.9 <span class="old-price">$1000.0</span>
                             </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9<span class="old-price">$1000.0</span>
+                            <div class="row ">
+                                <div class="reting col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
+                                <div class="addToCart text-center col-12">
+                                    <a href="#">
+                                        Add To Cart
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="items">
-                        <a href="">
-                            <div class="imgBox">
+                        <div class="imgBox">
+                            <a href="">
                                 <img src="./assets/images/products/product-1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                            <div class="price">
+                                $889.9 <span class="old-price">$1000.0</span>
                             </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9<span class="old-price">$1000.0</span>
+                            <div class="row ">
+                                <div class="reting col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
+                                <div class="addToCart text-center col-12">
+                                    <a href="#">
+                                        Add To Cart
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="items">
-                        <a href="">
-                            <div class="imgBox">
+                        <div class="imgBox">
+                            <a href="">
                                 <img src="./assets/images/products/product-1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                            <div class="price">
+                                $889.9 <span class="old-price">$1000.0</span>
                             </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9<span class="old-price">$1000.0</span>
+                            <div class="row ">
+                                <div class="reting col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
+                                <div class="addToCart text-center col-12">
+                                    <a href="#">
+                                        Add To Cart
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="items">
-                        <a href="">
-                            <div class="imgBox">
+                        <div class="imgBox">
+                            <a href="">
                                 <img src="./assets/images/products/product-1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                            <div class="price">
+                                $889.9 <span class="old-price">$1000.0</span>
                             </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9<span class="old-price">$1000.0</span>
+                            <div class="row ">
+                                <div class="reting col-12">
+                                    <ul class="d-flex align-items-center">
+                                        <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="iconify-icon">
+                                                <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
+                                <div class="addToCart text-center col-12">
+                                    <a href="#">
+                                        Add To Cart
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -619,28 +667,27 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
+                                <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                 <div class="price">
                                     $889.9 <span class="old-price">$1000.0</span>
                                 </div>
-                                <div class="row align-items-center">
-                                    <div class="reting col-lg-6 col-12">
+                                <div class="row ">
+                                    <div class="reting col-12">
                                         <ul class="d-flex align-items-center">
                                             <!-- <span class="pe-2 mt-1">4.5</span> -->
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
@@ -655,12 +702,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="addToCart col-lg-6 col-12">
+                                    <div class="addToCart text-center col-12">
                                         <a href="#">
-                                            <span class="iconify-icon">
-                                                <iconify-icon icon="mdi:cart-outline" width="20"
-                                                    height="20"></iconify-icon>
-                                            </span>
+                                            Add To Cart
                                         </a>
                                     </div>
                                 </div>
@@ -675,26 +719,27 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">$889.9</div>
-                                <div class="row align-items-center">
-                                    <div class="reting col-lg-6 col-12">
+                                <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                                <div class="price">
+                                    $889.9 <span class="old-price">$1000.0</span>
+                                </div>
+                                <div class="row ">
+                                    <div class="reting col-12">
                                         <ul class="d-flex align-items-center">
                                             <!-- <span class="pe-2 mt-1">4.5</span> -->
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
@@ -709,8 +754,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
+                                    <div class="addToCart text-center col-12">
+                                        <a href="#">
+                                            Add To Cart
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -724,28 +771,27 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
+                                <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                 <div class="price">
                                     $889.9 <span class="old-price">$1000.0</span>
                                 </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
+                                <div class="row ">
+                                    <div class="reting col-12">
                                         <ul class="d-flex align-items-center">
                                             <!-- <span class="pe-2 mt-1">4.5</span> -->
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
@@ -760,8 +806,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
+                                    <div class="addToCart text-center col-12">
+                                        <a href="#">
+                                            Add To Cart
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -775,28 +823,27 @@
                                 </a>
                             </div>
                             <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
+                                <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                 <div class="price">
                                     $889.9 <span class="old-price">$1000.0</span>
                                 </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
+                                <div class="row ">
+                                    <div class="reting col-12">
                                         <ul class="d-flex align-items-center">
                                             <!-- <span class="pe-2 mt-1">4.5</span> -->
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
+                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
                                                 </span>
                                             </li>
                                             <li>
@@ -811,220 +858,20 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
+                                    <div class="addToCart text-center col-12">
+                                        <a href="#">
+                                            Add To Cart
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6 my-3">
-                        <div class="items">
-                            <div class="imgBox">
-                                <a href="">
-                                    <img src="./assets/images/products/product-1.png" alt="" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9 <span class="old-price">$1000.0</span>
-                                </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <!-- <span class="pe-2 mt-1">4.5</span> -->
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 my-3">
-                        <div class="items">
-                            <div class="imgBox">
-                                <a href="">
-                                    <img src="./assets/images/products/product-1.png" alt="" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9 <span class="old-price">$1000.0</span>
-                                </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <!-- <span class="pe-2 mt-1">4.5</span> -->
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 my-3">
-                        <div class="items">
-                            <div class="imgBox">
-                                <a href="">
-                                    <img src="./assets/images/products/product-1.png" alt="" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9 <span class="old-price">$1000.0</span>
-                                </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <!-- <span class="pe-2 mt-1">4.5</span> -->
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 my-3">
-                        <div class="items">
-                            <div class="imgBox">
-                                <a href="">
-                                    <img src="./assets/images/products/product-1.png" alt="" />
-                                </a>
-                            </div>
-                            <div class="details">
-                                <a class="product-title" href="#">Business By Gaining Respectable Client
-                                    Satisfaction</a>
-                                <div class="price">
-                                    $889.9 <span class="old-price">$1000.0</span>
-                                </div>
-                                <div class="row">
-                                    <div class="reting col-lg-6 col-12">
-                                        <ul class="d-flex align-items-center">
-                                            <!-- <span class="pe-2 mt-1">4.5</span> -->
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="noto:star"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="iconify-icon">
-                                                    <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="addToCart col-lg-6 col-12">
-                                        <a href="#">Add To Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
                 <div class="view-all text-center">
-                    <a href="#">See more</a>
+                    <a href="shop.html">See more</a>
                 </div>
             </div>
         </section>

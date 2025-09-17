@@ -52,10 +52,10 @@
                         </span>
                     </div>
                     <!-- logo -->
-                    <div class="col-lg-2 col-6">
+                    <div class="col-lg-2 col-6 text-center">
                         <div class="logo">
                             <a href="index.html">
-                                <img class="img-fluid" src="./assets/images/logo/logo1.png" alt="Logo" />
+                                <img width="150px" class="img-fluid" src="./assets/images/logo/logo1.png" alt="Logo" />
                             </a>
                         </div>
                     </div>
@@ -107,6 +107,7 @@
                     </div>
                 </div>
                 <!-- search popup -->
+                <div class="searchBox-overlay"></div>
                 <div class="searchBox">
                     <form>
                         <div class="search-input">
@@ -212,7 +213,44 @@
                 </div>
             </div>
         </div>
+
+
     </header>
+    <!-- mobile menu footer -->
+    <div class="mobile-menu-footer d-lg-none d-block">
+        <div class="container">
+            <ul class=" d-flex align-items-center justify-content-between">
+                <li>
+                    <a href="index.html" class="">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="ion:home-outline" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="shop.html" class="active">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="bi:shop" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="cartBox">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="mdi:cart-outline" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconify-icon">
+                            <iconify-icon icon="solar:user-linear" width="25" height="25"></iconify-icon>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <main>
         <section id="breadcrumb">
@@ -491,54 +529,44 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
-                                        <div class="reting my-2">
-                                            <ul class="d-flex align-items-center">
-                                                <li>
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                    </span>
-                                                </li>
-                                                <li>
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                    </span>
-                                                </li>
-                                                <li>
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="weui:star-filled"></iconify-icon>
-                                                    </span>
-                                                </li>
-                                                <li>
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon class="starColor"
-                                                            icon="weui:star-filled"></iconify-icon>
-                                                    </span>
-                                                </li>
-                                                <li>
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon class="starColor"
-                                                            icon="weui:star-filled"></iconify-icon>
-                                                    </span>
-                                                </li>
-                                                <span class="pe-2 mt-1 ms-2 total-reting">(4.5)</span>
-                                                <li class="mt-1">
-                                                    <span class="in-stock">In Stock</span>
-                                                    <!-- <span class="out-stock">Out of Stock</span> -->
-                                                </li>
-                                            </ul>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
+                                        <div class="price">
+                                            $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="price col-lg-7 col-8">
-                                                $889.9 <span class="old-price">$1000.0</span>
+                                        <div class="row ">
+                                            <div class="reting col-12">
+                                                <ul class="d-flex align-items-center">
+                                                    <!-- <span class="pe-2 mt-1">4.5</span> -->
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="iconify-icon">
+                                                            <iconify-icon icon="weui:star-filled"></iconify-icon>
+                                                        </span>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="addToCart col-lg-5 col-4">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
@@ -553,13 +581,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -589,12 +616,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
@@ -609,13 +633,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -645,12 +668,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
@@ -665,13 +685,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -701,12 +720,9 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
@@ -721,13 +737,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -757,19 +772,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6 my-3">
+                            <div class="col-lg-4 col-6 my-2">
                                 <div class="items">
                                     <div class="imgBox">
                                         <a href="">
@@ -777,13 +789,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -813,19 +824,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6 my-3">
+                            <div class="col-lg-4 col-6 my-2">
                                 <div class="items">
                                     <div class="imgBox">
                                         <a href="">
@@ -833,13 +841,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -869,19 +876,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6 my-3">
+                            <div class="col-lg-4 col-6 my-2">
                                 <div class="items">
                                     <div class="imgBox">
                                         <a href="">
@@ -889,13 +893,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -925,19 +928,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6 my-3">
+                            <div class="col-lg-4 col-6 my-2">
                                 <div class="items">
                                     <div class="imgBox">
                                         <a href="">
@@ -945,13 +945,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -981,19 +980,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6 my-3">
+                            <div class="col-lg-4 col-6 my-2">
                                 <div class="items">
                                     <div class="imgBox">
                                         <a href="">
@@ -1001,13 +997,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -1037,19 +1032,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6 my-3">
+                            <div class="col-lg-4 col-6 my-2">
                                 <div class="items">
                                     <div class="imgBox">
                                         <a href="">
@@ -1057,13 +1049,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -1093,19 +1084,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6 my-3">
+                            <div class="col-lg-4 col-6 my-2">
                                 <div class="items">
                                     <div class="imgBox">
                                         <a href="">
@@ -1113,13 +1101,12 @@
                                         </a>
                                     </div>
                                     <div class="details">
-                                        <a class="product-title" href="#">Business By Gaining Respectable Client
-                                            Satisfaction</a>
+                                        <a class="product-title" href="#">Business By Gaining Respectable Client</a>
                                         <div class="price">
                                             $889.9 <span class="old-price">$1000.0</span>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="reting col-lg-6 col-12">
+                                        <div class="row ">
+                                            <div class="reting col-12">
                                                 <ul class="d-flex align-items-center">
                                                     <!-- <span class="pe-2 mt-1">4.5</span> -->
                                                     <li>
@@ -1149,18 +1136,16 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="addToCart col-lg-6 col-12">
+                                            <div class="addToCart text-center col-12">
                                                 <a href="#">
-                                                    <span class="iconify-icon">
-                                                        <iconify-icon icon="mdi:cart-outline" width="20"
-                                                            height="20"></iconify-icon>
-                                                    </span>
+                                                    Add To Cart
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -1169,7 +1154,7 @@
     </main>
 
     <!-- Footer -->
-    <!-- <footer>
+    <footer>
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-4 mt-3 mt-lg-0">
@@ -1223,7 +1208,7 @@
                 <a href="#">TechItNext</a>
             </p>
         </div>
-    </footer> -->
+    </footer>
 
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>

@@ -10,19 +10,28 @@ $(document).ready(function () {
     }
   });
 
-  //
+  //search popup
   $('#searchBtn').on('click', function () {
     $('.searchBox').toggleClass('active');
 
     if ($('.searchBox').hasClass('active')) {
       $('#searchBtn .closeIcon').removeClass('d-none').addClass('d-block');
       $('#searchBtn .searchIcon').addClass('d-none');
+      $('.searchBox-overlay').addClass('active').fadeIn(400);
     } else {
       $('#searchBtn .closeIcon').addClass('d-none').removeClass('d-block');
       $('#searchBtn .searchIcon').removeClass('d-none');
+      $('.searchBox-overlay').removeClass('active').fadeOut(400);
     }
   });
+  $('.searchBox-overlay').on('click', function () {
+    $('.searchBox').removeClass('active');
+    $('#searchBtn .closeIcon').addClass('d-none').removeClass('d-block');
+    $('#searchBtn .searchIcon').removeClass('d-none');
+    $('.searchBox-overlay').removeClass('active').fadeOut(400);
+  });
 
+  //banner
   $('.bannerBox').on('init', function (event, slick) {
     $('.Banner_items').eq(0).addClass('active');
   });
@@ -55,10 +64,16 @@ $(document).ready(function () {
     $('.menuPopup').removeClass('active');
     $('.menuOverlay').removeClass('active');
   });
-  // Card popup
+
+  // Cart popup
   $('.cartBox').on('click', function () {
-    $('.cartPopup').addClass('active');
-    $('.cartOverlay').addClass('active');
+    $('.cartPopup').toggleClass('active');
+    if ($('.cartPopup').hasClass('active')) {
+      $('.cartOverlay').addClass('active');
+    } else {
+      $('.cartPopup').removeClass('active');
+      $('.cartOverlay').removeClass('active');
+    }
   });
   $('.cartOverlay,.closeBtn').on('click', function () {
     $('.cartPopup').removeClass('active');
@@ -139,7 +154,7 @@ $(document).ready(function () {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -207,5 +222,72 @@ $(document).ready(function () {
   $('.filter-header .closeBtn,.filter-overley').on('click', function () {
     $('.filter-popup').removeClass('active');
     $('.filter-overley').removeClass('active');
+  });
+
+  // product details all image sliber
+  $('.child-images').slick({
+    dots: false,
+    autoplay: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  $('.child-images .image-item img').click(function () {
+    let imgSrc = $(this).attr('src');
+    $('.main-image img').attr('src', imgSrc);
+  });
+
+  $(document).ready(function () {
+    // Plus button
+    $('.quantity-plus').on('click', function () {
+      let input = $(this).closest('.quantity').find('.input-quantity input');
+      let value = parseInt(input.val()) || 0;
+      input.val(value + 1);
+    });
+
+    // Minus button
+    $('.quantity-minus').on('click', function () {
+      let input = $(this).closest('.quantity').find('.input-quantity input');
+      let value = parseInt(input.val()) || 0;
+      if (value > 1) {
+        input.val(value - 1);
+      }
+    });
   });
 });
