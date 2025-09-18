@@ -349,4 +349,31 @@ $(document).ready(function () {
       },
     ],
   });
+  // Login password toggole
+  $('#togglePassword').on('click', function () {
+    let input = $('#password');
+    let type = input.attr('type');
+
+    if (type === 'password') {
+      input.attr('type', 'text'); // show password
+      $(this).attr('icon', 'radix-icons:eye-open'); // icon change
+    } else {
+      input.attr('type', 'password'); // hide password
+      $(this).attr('icon', 'radix-icons:eye-closed'); // icon change
+    }
+  });
+  // register password toggole
+  $('.togglePassword').on('click', function () {
+    let targetId = $(this).data('target');
+    let input = $('#' + targetId);
+    let type = input.attr('type');
+
+    if (type === 'password') {
+      input.attr('type', 'text');
+      $(this).attr('icon', 'radix-icons:eye-open');
+    } else {
+      input.attr('type', 'password');
+      $(this).attr('icon', 'radix-icons:eye-closed');
+    }
+  });
 });

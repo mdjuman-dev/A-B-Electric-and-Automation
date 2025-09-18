@@ -81,7 +81,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                         <!-- search and cart icons -->
@@ -160,7 +160,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
         <!-- mobile menu footer -->
         <div class="mobile-menu-footer d-lg-none d-block">
             <div class="container">
-                <ul class=" d-flex align-items-center justify-content-between">
+                <ul class="d-flex align-items-center justify-content-between">
                     <li>
                         <a href="index.html" class="active">
                             <span class="iconify-icon">
@@ -250,18 +250,19 @@
             </div>
         </div>
     </section>
+
     <main>
         <section id="breadcrumb">
             <div class="container">
                 <ul class="d-flex align-items-center">
                     <li>
-                        <a href="">Home</a>
+                        <a href="index.html">Home</a>
                         <span class="iconify-icon">
                             <iconify-icon icon="ep:arrow-right"></iconify-icon>
                         </span>
                     </li>
                     <li>
-                        <a href="">Contact Us</a>
+                        <a href="">Login</a>
                         <span class="iconify-icon">
                             <iconify-icon icon="ep:arrow-right"></iconify-icon>
                         </span>
@@ -269,116 +270,50 @@
                 </ul>
             </div>
         </section>
-        <section id="contact-form">
+
+        <section id="login">
             <div class="container">
-                <!-- <h2>Contact us</h2> -->
-                <p>Get in touch</p>
-                <hr>
-                <div class="row ">
-                    <div class="col-lg-7 col-12 left-side">
+                <div class="login-parent">
+                    <div class="childe">
                         <form action="">
+                            <h2 class="text-center">Login</h2>
+                            <!-- <hr> -->
                             <div class="form-group my-2">
-                                <label for="name" class="form-label">Your Name (required)</label>
-                                <input type="text" class="form-control">
+                                <label for="email" class="form-label">Your E-mail <span
+                                        class="text-danger">*</span></label>
+                                <input name="email" id="email" type="email" class="form-control">
                             </div>
                             <div class="form-group my-2">
-                                <label for="email" class="form-label">Your E-mail (required)</label>
-                                <input type="text" class="form-control">
+                                <label for="password" class="form-label">Enter password <span
+                                        class="text-danger">*</span></label>
+                                <div class="password-box">
+                                    <input name="password" id="password" type="password" class="form-control" />
+                                    <span class="show">
+                                        <iconify-icon id="togglePassword" icon="radix-icons:eye-closed" width="24"
+                                            height="24"></iconify-icon>
+                                    </span>
+                                </div>
                             </div>
                             <div class="form-group my-2">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control">
+                                <input id="remember" name="remember" type="checkbox" class="form-checkbox">
+                                <label for="remember" class="form-label">Remember Me</label>
                             </div>
                             <div class="form-group my-2">
-                                <label for="message" class="form-label">Your Message</label>
-                                <textarea rows="2" class="form-control"></textarea>
+                                <button class="">Login</button>
                             </div>
 
-                            <button class="mt-2">SEND MESSAGE</button>
+                            <p>Don't have account yet? <a class="text-decoration-underline" href="register.html">Sign
+                                    up</a></p>
                         </form>
-                    </div>
-                    <div class="col-lg-5 col-12 right-side">
-                        <h2>Social links</h2>
-                        <ul class="d-flex align-items-center social-links">
-                            <li>
-                                <a class="icon-facebook" href="#">
-                                    <span class="iconify-icon">
-                                        <iconify-icon icon="flowbite:facebook-solid" width="24"
-                                            height="24"></iconify-icon>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="icon-instagram" href="#">
-                                    <span class="iconify-icon">
-                                        <iconify-icon icon="ri:instagram-line" width="24" height="24"></iconify-icon>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="icon-youtube" href="#">
-                                    <span class="iconify-icon">
-                                        <iconify-icon icon="basil:youtube-outline" width="24"
-                                            height="24"></iconify-icon>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="icon-whatsapp" href="#">
-                                    <span class="iconify-icon">
-                                        <iconify-icon icon="ic:baseline-whatsapp" width="24" height="24"></iconify-icon>
-                                    </span>
-                                </a>
-                            </li>
-
-                        </ul>
-                        <hr>
-                        <h3 class="general-equerries">General equerries</h3>
-                        <ul class="equerries">
-                            <li>
-                                <span>Mobimax Auto Parts Shop</span>
-                            </li>
-                            <li>
-                                <span>17 Antares Place,</span>
-                            </li>
-                            <li>
-                                <span>Mairangi Bay,</span>
-                            </li>
-                            <li>
-                                <span>Auckland 0632</span>
-                            </li>
-                        </ul>
-                        <hr>
-
-                        <div class="d-flex support">
-                            <div class="icon">
-                                <span class="iconify-icon">
-                                    <iconify-icon icon="mdi:support"></iconify-icon>
-                                </span>
-                            </div>
-                            <div class="number">
-                                <p>Call Us 24/7!</p>
-                                <a href="tel:+8801712345678">+880 1712 345 678,</a>
-
-                                <a href="tel:+8801713325475">+880 1713 325 475</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="locetion">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146212.15216744455!2d91.73663616385171!3d22.357533369258274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram!5e1!3m2!1sen!2sbd!4v1758190083777!5m2!1sen!2sbd"
-                width="100%" height="450" style="border:0; margin-top: 20px; margin-bottom: -55px;" allowfullscreen="true"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
     </main>
-
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row  justify-content-between">
+            <div class="row justify-content-between">
                 <div class="col-lg-4 mt-3 mt-lg-0">
                     <div class="logo">
                         <a href="">
@@ -386,17 +321,16 @@
                         </a>
                     </div>
                     <p>
-                        We work on market over 20 years. We sale only original auto parts and gained confidence of 320k
-                        + clients. Buy from
-                        MobiMax, join our big community.
+                        We work on market over 20 years. We sale only original auto parts
+                        and gained confidence of 320k + clients. Buy from MobiMax, join
+                        our big community.
                     </p>
-
                 </div>
                 <div class="col-lg-4 customer-services mt-3 mt-lg-0">
                     <h4>Customer Services</h4>
-                    <hr>
+                    <hr />
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Delivery Information</a></li>
                         <li><a href="#">Returns & Refunds</a></li>
@@ -405,7 +339,7 @@
                 </div>
                 <div class="col-lg-4 mt-3 mt-lg-0 contact">
                     <h4>Contacts</h4>
-                    <hr>
+                    <hr />
                     <ul>
                         <li>
                             <span class="iconify-icon">
@@ -423,11 +357,11 @@
                             <span class="iconify-icon">
                                 <iconify-icon icon="tdesign:time" width="24" height="24"></iconify-icon>
                             </span>
-                            <p class="d-inline-block" href="#">Mon. - Sat. 10:00 am - 20:00 pm</p>
+                            <p class="d-inline-block" href="#">
+                                Mon. - Sat. 10:00 am - 20:00 pm
+                            </p>
                         </li>
-
                     </ul>
-
 
                     <ul class="d-flex align-items-center shoshalmedia">
                         <li>
@@ -458,7 +392,6 @@
                                 </span>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>

@@ -1651,7 +1651,7 @@ footer .copyright p a:hover {
 }
 /*! End Product details Section *****/
 
-/***** Section *****/
+/*! contact Section *****/
 #contact-form hr {
   color: var(--shadow);
 }
@@ -1742,4 +1742,47 @@ footer .copyright p a:hover {
 .support .number a:hover {
   text-decoration: underline;
 }
-/***** End Section *****/
+/*! Contact End Section *****/
+
+/*! Login Section *****/
+
+.register-parent,
+.login-parent {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.childe {
+  width: 500px;
+  border: 1px solid var(--shadow);
+  padding: 20px;
+  border-radius: 10px;
+}
+.childe button {
+  width: 100%;
+  padding: 10px 20px;
+  border: 0;
+  background: var(--primary);
+  border-radius: 7px;
+  color: var(--white);
+  font-family: var(--font-family);
+  font-weight: 600;
+}
+.childe p {
+  font-family: var(--font-family);
+  margin-top: 10px;
+}
+.childe .password-box {
+  position: relative;
+}
+.childe .password-box .show {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+/*! End Login Section *****/
