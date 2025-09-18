@@ -1111,6 +1111,10 @@ footer {
   margin-top: 50px;
   padding-top: 50px;
 }
+footer hr {
+  color: #5c5c5c;
+  margin: 10px 0;
+}
 footer .logo img {
   width: 200px;
 }
@@ -1124,8 +1128,32 @@ footer p {
 footer .shoshalmedia {
   margin-top: 20px;
 }
+footer .shoshalmedia .icon-youtube span,
+footer .shoshalmedia .icon-instagram span,
+footer .shoshalmedia .icon-whatsapp span,
+footer .shoshalmedia .icon-facebook span {
+  margin: 0;
+}
+footer .shoshalmedia .icon-facebook {
+  background: #0866ff;
+}
+footer .shoshalmedia .icon-youtube {
+  background: #b20024;
+}
+footer .shoshalmedia .icon-whatsapp {
+  background: #25d366;
+}
+footer .shoshalmedia .icon-instagram {
+  background: #c40751;
+}
+footer .shoshalmedia .icon-facebook iconify-icon,
+footer .shoshalmedia .icon-youtube iconify-icon,
+footer .shoshalmedia .icon-whatsapp iconify-icon,
+footer .shoshalmedia .icon-instagram iconify-icon {
+  color: var(--white);
+}
 footer .shoshalmedia li {
-  margin: 0 5px;
+  margin: 5px !important;
 }
 footer .shoshalmedia li a {
   color: var(--black);
@@ -1133,43 +1161,61 @@ footer .shoshalmedia li a {
   background: var(--white);
   display: flex;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 7px;
   transition: 0.3s ease;
 }
 footer .shoshalmedia li a:hover {
-  background: var(--primary-hover);
-  color: var(--white);
+  transform: translateY(-5px);
 }
 
 footer .shoshalmedia li a iconify-icon {
   font-size: 25px;
 }
 
-footer .important-links h4 {
+footer .customer-services h4 {
   font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 19px;
   color: var(--white);
 }
-footer .important-links ul li {
+footer .customer-services ul li {
   margin: 5px 0;
 }
-footer .important-links ul li a {
+footer .customer-services ul li a {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
-  color: var(--white);
+  color: var(--shadow);
   transition: 0.3s ease;
 }
-footer .important-links ul {
+footer .customer-services ul {
   margin-top: 20px;
 }
-footer .important-links ul li a:hover {
-  color: var(--primary-hover);
+footer .customer-services ul li a:hover {
+  color: var(--white);
+}
+
+footer .contact h4 {
+  color: var(--white);
+  font-size: 19px;
+  font-family: var(--font-family);
+}
+footer .contact ul li {
+  margin: 10px 0;
+}
+footer .contact ul li span {
+  color: var(--primary);
+  margin-right: 10px;
+}
+footer .contact ul li a {
+  color: var(--white);
+}
+footer .contact ul li p {
+  color: var(--white);
 }
 footer .copyright p {
   color: var(--white);
-  border-top: 1px solid var(--shadow);
+  border-top: 1px solid #3a3a3a;
   margin-top: 20px;
   padding: 20px 0;
   font-family: var(--font-family);
@@ -1199,7 +1245,7 @@ footer .copyright p a:hover {
   color: var(--primary);
 }
 #breadcrumb ul iconify-icon {
-  margin: 0 10px;
+  margin: 0 5px;
   color: var(--black);
 }
 
@@ -1604,3 +1650,96 @@ footer .copyright p a:hover {
   background: var(--primary-hover);
 }
 /*! End Product details Section *****/
+
+/***** Section *****/
+#contact-form hr {
+  color: var(--shadow);
+}
+#contact-form h2 {
+  font-size: 25px;
+  font-family: var(--font-family);
+  margin-bottom: 4px;
+}
+#contact-form p {
+  font-size: 16px;
+  font-family: var(--font-family);
+  margin-bottom: 4px;
+}
+.left-side button {
+  border: none;
+  padding: 7px 15px;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 7px;
+  font-family: var(--font-family);
+}
+
+.right-side h2 {
+  font-size: 20px;
+  font-family: var(--font-family);
+}
+.social-links {
+  margin-top: 20px;
+}
+.social-links a {
+  padding: 5px;
+  border-radius: 5px;
+}
+.social-links a .iconify-icon {
+  padding-bottom: 5px;
+}
+.social-links .icon-facebook {
+  background: #0866ff;
+}
+.social-links .icon-youtube {
+  background: #b20024;
+}
+.social-links .icon-whatsapp {
+  background: #25d366;
+}
+.social-links .icon-instagram {
+  background: #c40751;
+}
+.social-links .icon-facebook iconify-icon,
+.social-links .icon-youtube iconify-icon,
+.social-links .icon-whatsapp iconify-icon,
+.social-links .icon-instagram iconify-icon {
+  color: var(--white);
+}
+.social-links li {
+  margin: 5px !important;
+  transition: 0.2s;
+}
+.social-links li:hover {
+  transform: translateY(-5px);
+}
+
+.general-equerries {
+  font-size: 20px;
+  font-family: var(--font-family);
+  margin-bottom: 10px;
+}
+.equerries li {
+  margin: 5px 0;
+}
+
+.support iconify-icon {
+  font-size: 50px;
+  color: var(--primary);
+}
+.support .icon {
+  margin-right: 10px;
+}
+.support .number p {
+  font-size: 16px;
+  font-family: var(--black);
+  font-weight: 600;
+}
+.support .number a {
+  color: rgb(71, 70, 70);
+  font-family: var(--font-family);
+}
+.support .number a:hover {
+  text-decoration: underline;
+}
+/***** End Section *****/

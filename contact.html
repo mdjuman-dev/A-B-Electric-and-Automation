@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A B Electric and Automation</title>
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+    <section id="header">
+        <!-- Main Header -->
+        <header>
+            <div class="d-lg-block d-none topBar">
+                <div id="topBar" class="d-flex align-items-center">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="offers">
+                            <p>20% Off On All Products!</p>
+                        </div>
+                        <ul class="quick-menu d-flex align-items-center">
+                            <li class="acctAnCur">
+                                <a href="#" class="d-flex align-items-center">
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="uil:user" width="20" height="20"></iconify-icon>
+                                    </span>
+                                    <span>Accout</span>
+                                </a>
+                            </li>
+                            <li class="curency d-flex align-items-center">
+                                <span>Curency :</span>
+                                <select name="curency" id="">
+                                    <option value="USA">USA</option>
+                                    <option value="USA">BNE</option>
+                                    <option value="USA">IN</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="container position-relative">
+                    <div class="row align-items-center justify-content-between">
+                        <!-- mobile menu -->
+                        <div class="mobile-menu col-2 d-block d-lg-none menuBox">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
+                            </span>
+                        </div>
+                        <!-- logo -->
+                        <div class="col-lg-2 col-6 text-center">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img width="150px" class="img-fluid" src="./assets/images/logo/logo1.png"
+                                        alt="Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <!-- mein menu -->
+                        <div class="col-lg-7 d-lg-block d-none">
+                            <ul class="main-menu d-flex align-items-center justify-content-center">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li class="category">
+                                    <a href="#">Our Categories
+                                        <div class="iconify-icon">
+                                            <iconify-icon icon="ri:arrow-down-s-line" width="20"
+                                                height="20"></iconify-icon>
+                                        </div>
+                                    </a>
+                                    <ul class="subCategory">
+                                        <li><a href="#">Category 1</a></li>
+                                        <li><a href="#">Category 2</a></li>
+                                        <li><a href="#">Category 3</a></li>
+                                        <li><a href="#">Category 4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- search and cart icons -->
+                        <div class="col-lg-3 quick-access col-2">
+                            <ul class="d-flex align-items-center justify-content-end">
+                                <li id="searchBtn">
+                                    <span class="iconify-icon">
+                                        <iconify-icon class="searchIcon" icon="lucide:search" width="30"
+                                            height="30"></iconify-icon>
+                                        <iconify-icon class="closeIcon d-none" icon="material-symbols:close" width="30"
+                                            height="30"></iconify-icon>
+                                    </span>
+                                </li>
+                                <div class="d-lg-block d-none">
+                                    <li class="cartBox d-flex align-items-center">
+                                        <span class="iconify-icon">
+                                            <iconify-icon icon="mdi:cart-outline" width="30" height="30"></iconify-icon>
+                                        </span>
+                                        <span class="d-lg-block d-none">
+                                            <p class="qty">0 Items</p>
+                                            <p class="total">20.00 USD</p>
+                                        </span>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- search popup -->
+                    <div class="searchBox-overlay"></div>
+                    <div class="searchBox">
+                        <form>
+                            <div class="search-input">
+                                <input type="text" name="search" placeholder="Find your favorite products..." />
+                                <button>
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="lucide:search" width="30" height="30"></iconify-icon>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Popup -->
+            <!-- Menu Overlay -->
+            <div class="menuOverlay"></div>
+            <div class="menuPopup">
+                <div class="menu">
+                    <!-- Header -->
+                    <div class="menu-header d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <img width="150px" class="img-fluid" src="./assets/images/logo/logo1.png" alt="" />
+                        </div>
+                        <button class="closeBtn">
+                            <iconify-icon icon="material-symbols:close-rounded" width="25" height="25"></iconify-icon>
+                        </button>
+                    </div>
+                    <!-- Body -->
+                    <div class="menu-body">
+                        <div class="col-lg-7">
+                            <ul class="main-menu">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li class="category">
+                                    <a href="#">Our Categories
+                                        <div class="iconify-icon">
+                                            <iconify-icon icon="ri:arrow-down-s-line" width="20"
+                                                height="20"></iconify-icon>
+                                        </div>
+                                    </a>
+                                    <ul class="subCategory">
+                                        <li><a href="#">Category 1</a></li>
+                                        <li><a href="#">Category 2</a></li>
+                                        <li><a href="#">Category 3</a></li>
+                                        <li><a href="#">Category 4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cart Popup -->
+            <!-- Cart Overlay -->
+            <div class="cartOverlay"></div>
+            <div class="cartPopup">
+                <div class="cart">
+                    <!-- Header -->
+                    <div class="cart-header d-flex justify-content-between align-items-center">
+                        <h5 class="m-0">Your Cart</h5>
+                        <button class="closeBtn">
+                            <iconify-icon icon="material-symbols:close-rounded" width="24" height="24"></iconify-icon>
+                        </button>
+                    </div>
+                    <!-- Body -->
+                    <div class="cart-body">
+                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                    alt="Product" />
+                                <div>
+                                    <p class="mb-1 fw-semibold">Product Name</p>
+                                    <small class="text-muted">1 × $20</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">$20</span>
+                        </div>
+                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                    alt="Product" />
+                                <div>
+                                    <p class="mb-1 fw-semibold">Another Item</p>
+                                    <small class="text-muted">2 × $15</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">$30</span>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="cart-footer">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="fw-semibold">Subtotal:</span>
+                            <span class="fw-bold">$50</span>
+                        </div>
+                        <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mobile menu footer -->
+        <div class="mobile-menu-footer d-lg-none d-block">
+            <div class="container">
+                <ul class=" d-flex align-items-center justify-content-between">
+                    <li>
+                        <a href="index.html" class="active">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="ion:home-outline" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shop.html">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="bi:shop" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cartBox">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="mdi:cart-outline" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="solar:user-linear" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section id="breadcrumb">
+            <div class="container">
+                <ul class="d-flex align-items-center">
+                    <li>
+                        <a href="">Home</a>
+                        <span class="iconify-icon">
+                            <iconify-icon icon="ep:arrow-right"></iconify-icon>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="">Contact Us</a>
+                        <span class="iconify-icon">
+                            <iconify-icon icon="ep:arrow-right"></iconify-icon>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact-form">
+            <div class="container">
+                <h2>Contact us</h2>
+                <p>Get in touch</p>
+                <hr>
+                <div class="row ">
+                    <div class="col-lg-7 col-12 left-side">
+                        <form action="">
+                            <div class="form-group my-2">
+                                <label for="name" class="form-label">Your Name (required)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group my-2">
+                                <label for="email" class="form-label">Your E-mail (required)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group my-2">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group my-2">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea rows="2" class="form-control"></textarea>
+                            </div>
+
+                            <button class="mt-2">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 col-12 right-side">
+                        <h2>Social links</h2>
+                        <ul class="d-flex align-items-center social-links">
+                            <li>
+                                <a class="icon-facebook" href="#">
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="flowbite:facebook-solid" width="24"
+                                            height="24"></iconify-icon>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-instagram" href="#">
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="ri:instagram-line" width="24" height="24"></iconify-icon>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-youtube" href="#">
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="basil:youtube-outline" width="24"
+                                            height="24"></iconify-icon>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-whatsapp" href="#">
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="ic:baseline-whatsapp" width="24" height="24"></iconify-icon>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <hr>
+                        <h3 class="general-equerries">General equerries</h3>
+                        <ul class="equerries">
+                            <li>
+                                <span>Mobimax Auto Parts Shop</span>
+                            </li>
+                            <li>
+                                <span>17 Antares Place,</span>
+                            </li>
+                            <li>
+                                <span>Mairangi Bay,</span>
+                            </li>
+                            <li>
+                                <span>Auckland 0632</span>
+                            </li>
+                        </ul>
+                        <hr>
+
+                        <div class="d-flex support">
+                            <div class="icon">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="mdi:support"></iconify-icon>
+                                </span>
+                            </div>
+                            <div class="number">
+                                <p>Call Us 24/7!</p>
+                                <a href="tel:+8801712345678">+880 1712 345 678,</a>
+
+                                <a href="tel:+8801713325475">+880 1713 325 475</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="locetion">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146212.15216744455!2d91.73663616385171!3d22.357533369258274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram!5e1!3m2!1sen!2sbd!4v1758190083777!5m2!1sen!2sbd"
+                width="100%" height="450" style="border:0; margin-top: 20px; margin-bottom: -55px;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row  justify-content-between">
+                <div class="col-lg-4 mt-3 mt-lg-0">
+                    <div class="logo">
+                        <a href="">
+                            <img src="./assets/images/logo/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <p>
+                        We work on market over 20 years. We sale only original auto parts and gained confidence of 320k
+                        + clients. Buy from
+                        MobiMax, join our big community.
+                    </p>
+
+                </div>
+                <div class="col-lg-4 customer-services mt-3 mt-lg-0">
+                    <h4>Customer Services</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Product Recall</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mt-3 mt-lg-0 contact">
+                    <h4>Contacts</h4>
+                    <hr>
+                    <ul>
+                        <li>
+                            <span class="iconify-icon">
+                                <iconify-icon icon="clarity:email-line" width="24" height="24"></iconify-icon>
+                            </span>
+                            <a href="#">support@mobimax.com</a>
+                        </li>
+                        <li>
+                            <span class="iconify-icon">
+                                <iconify-icon icon="fluent:call-32-regular" width="24" height="24"></iconify-icon>
+                            </span>
+                            <a href="#">070 5159 1537</a>
+                        </li>
+                        <li>
+                            <span class="iconify-icon">
+                                <iconify-icon icon="tdesign:time" width="24" height="24"></iconify-icon>
+                            </span>
+                            <p class="d-inline-block" href="#">Mon. - Sat. 10:00 am - 20:00 pm</p>
+                        </li>
+
+                    </ul>
+
+
+                    <ul class="d-flex align-items-center shoshalmedia">
+                        <li>
+                            <a class="icon-facebook" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="flowbite:facebook-solid"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-instagram" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="ri:instagram-line" width="24" height="24"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-youtube" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="basil:youtube-outline"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-whatsapp" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright">
+            <p>
+                &copy; 2025 A B Electric & Automation | Developed by
+                <a href="#">TechItNext</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/iconify-icon.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
