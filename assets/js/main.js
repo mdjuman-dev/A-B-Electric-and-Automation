@@ -228,7 +228,7 @@ $(document).ready(function () {
   $('.child-images').slick({
     dots: false,
     autoplay: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -272,22 +272,81 @@ $(document).ready(function () {
     let imgSrc = $(this).attr('src');
     $('.main-image img').attr('src', imgSrc);
   });
+  //product quantity
+  // Plus button
+  $('.quantity-plus').on('click', function () {
+    let input = $(this).closest('.quantity').find('.input-quantity input');
+    let minusBtn = $(this).closest('.quantity').find('.quantity-minus');
+    let value = parseInt(input.val()) || 0;
 
-  $(document).ready(function () {
-    // Plus button
-    $('.quantity-plus').on('click', function () {
-      let input = $(this).closest('.quantity').find('.input-quantity input');
-      let value = parseInt(input.val()) || 0;
-      input.val(value + 1);
-    });
+    input.val(value + 1);
+    minusBtn.prop('disabled', false); // plus চাপলে minus আবার active হবে
+  });
 
-    // Minus button
-    $('.quantity-minus').on('click', function () {
-      let input = $(this).closest('.quantity').find('.input-quantity input');
-      let value = parseInt(input.val()) || 0;
-      if (value > 1) {
-        input.val(value - 1);
+  // Minus button
+  $('.quantity-minus').on('click', function () {
+    let input = $(this).closest('.quantity').find('.input-quantity input');
+    let value = parseInt(input.val()) || 0;
+
+    if (value > 1) {
+      input.val(value - 1);
+      if (value - 1 === 1) {
+        $(this).prop('disabled', true); // যদি মান ১ হয় তাহলে disable হবে
       }
-    });
+    }
+  });
+
+  // Direct typing validation
+  $('.input-quantity input').on('input', function () {
+    let value = parseInt($(this).val()) || 0;
+    let minusBtn = $(this).closest('.quantity').find('.quantity-minus');
+
+    if (value <= 1) {
+      $(this).val(1);
+      minusBtn.prop('disabled', true);
+    } else {
+      minusBtn.prop('disabled', false);
+    }
+  });
+
+  //product details page related products slidar
+  $('.related-products').slick({
+    autoplay: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 });
