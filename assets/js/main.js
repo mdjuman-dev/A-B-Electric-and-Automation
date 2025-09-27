@@ -377,3 +377,59 @@ $(document).ready(function () {
     }
   });
 });
+
+
+//*====== User Dashboard ============= //
+  $(document).ready(function () {
+    // Order filtering functionality
+    $('.orders-filter select').change(function () {
+      const filterValue = $(this).val();
+      $('.order-card').hide();
+
+      if (filterValue === 'all') {
+        $('.order-card').show();
+      } else {
+        $(`.order-card .badge.bg-${filterValue}`).closest('.order-card').show();
+      }
+    });
+
+    // Order actions
+    $('.btn-outline-primary').click(function () {
+      const orderId = $(this)
+        .closest('.order-card')
+        .find('.order-info h6')
+        .text();
+      alert(`Viewing details for: ${orderId}`);
+    });
+
+    $('.btn-outline-success').click(function () {
+      const orderId = $(this)
+        .closest('.order-card')
+        .find('.order-info h6')
+        .text();
+      alert(`Reordering: ${orderId}`);
+    });
+
+    $('.btn-primary').click(function () {
+      alert('Redirecting to payment gateway...');
+    });
+
+    $('.btn-outline-warning, .btn-outline-danger').click(function () {
+      if (confirm('Are you sure you want to cancel this order?')) {
+        alert('Order cancellation request submitted.');
+      }
+    });
+
+    // Profile edit button
+    $('#editProfileBtn').click(function () {
+      $('#edit-tab').tab('show');
+    });
+
+    // Tab switching functionality
+    $('.nav-tabs .nav-link').click(function () {
+      $('.nav-tabs .nav-link').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+  
+
