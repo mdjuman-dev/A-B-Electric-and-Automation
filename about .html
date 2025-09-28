@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A B Electric and Automation About</title>
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+
+    <section id="header">
+        <!-- Main Header -->
+        <header>
+            <div class="d-lg-block d-none topBar">
+                <div id="topBar" class="d-flex align-items-center">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="offers">
+                            <p>20% Off On All Products!</p>
+                        </div>
+                        <ul class="quick-menu d-flex align-items-center">
+                            <li class="acctAnCur">
+                                <a href="login.html" class="d-flex align-items-center">
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="uil:user" width="20" height="20"></iconify-icon>
+                                    </span>
+                                    <span>Account</span>
+                                </a>
+                            </li>
+                            <li class="curency d-flex align-items-center">
+                                <span>Currency :</span>
+                                <select name="curency" id="">
+                                    <option value="USA">USA</option>
+                                    <option value="USA">BNE</option>
+                                    <option value="USA">IN</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="container position-relative">
+                    <div class="row align-items-center justify-content-between">
+                        <!-- mobile menu -->
+                        <div class="mobile-menu col-2 d-block d-lg-none menuBox">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
+                            </span>
+                        </div>
+                        <!-- logo -->
+                        <div class="col-lg-2 col-6 text-center">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img width="150px" class="img-fluid" src="./assets/images/logo/logo1.png"
+                                        alt="Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <!-- main menu -->
+                        <div class="col-lg-7 d-lg-block d-none">
+                            <ul class="main-menu d-flex align-items-center justify-content-center">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li class="category">
+                                    <a href="#">Our Categories
+                                        <div class="iconify-icon">
+                                            <iconify-icon icon="ri:arrow-down-s-line" width="20"
+                                                height="20"></iconify-icon>
+                                        </div>
+                                    </a>
+                                    <ul class="subCategory">
+                                        <li><a href="#">Category 1</a></li>
+                                        <li><a href="#">Category 2</a></li>
+                                        <li><a href="#">Category 3</a></li>
+                                        <li><a href="#">Category 4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html" class="active">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- search and cart icons -->
+                        <div class="col-lg-3 quick-access col-2">
+                            <ul class="d-flex align-items-center justify-content-end">
+                                <li id="searchBtn">
+                                    <span class="iconify-icon">
+                                        <iconify-icon class="searchIcon" icon="lucide:search" width="30"
+                                            height="30"></iconify-icon>
+                                        <iconify-icon class="closeIcon d-none" icon="material-symbols:close" width="30"
+                                            height="30"></iconify-icon>
+                                    </span>
+                                </li>
+                                <div class="d-lg-block d-none">
+                                    <li class="cartBox d-flex align-items-center">
+                                        <span class="iconify-icon">
+                                            <iconify-icon icon="mdi:cart-outline" width="30" height="30"></iconify-icon>
+                                        </span>
+                                        <span class="d-lg-block d-none">
+                                            <p class="qty">0 Items</p>
+                                            <p class="total">20.00 USD</p>
+                                        </span>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- search popup -->
+                    <div class="searchBox-overlay"></div>
+                    <div class="searchBox">
+                        <form>
+                            <div class="search-input">
+                                <input type="text" name="search" placeholder="Find your favorite products..." />
+                                <button>
+                                    <span class="iconify-icon">
+                                        <iconify-icon icon="lucide:search" width="30" height="30"></iconify-icon>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Popup -->
+            <!-- Menu Overlay -->
+            <div class="menuOverlay"></div>
+            <div class="menuPopup">
+                <div class="menu">
+                    <!-- Header -->
+                    <div class="menu-header d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <img width="150px" class="img-fluid" src="./assets/images/logo/logo1.png" alt="" />
+                        </div>
+                        <button class="closeBtn">
+                            <iconify-icon icon="material-symbols:close-rounded" width="25" height="25"></iconify-icon>
+                        </button>
+                    </div>
+                    <!-- Body -->
+                    <div class="menu-body">
+                        <div class="col-lg-7">
+                            <ul class="main-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li class="category">
+                                    <a href="#">Our Categories
+                                        <div class="iconify-icon">
+                                            <iconify-icon icon="ri:arrow-down-s-line" width="20"
+                                                height="20"></iconify-icon>
+                                        </div>
+                                    </a>
+                                    <ul class="subCategory">
+                                        <li><a href="#">Category 1</a></li>
+                                        <li><a href="#">Category 2</a></li>
+                                        <li><a href="#">Category 3</a></li>
+                                        <li><a href="#">Category 4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html" class="active">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cart Popup -->
+            <!-- Cart Overlay -->
+            <div class="cartOverlay"></div>
+            <div class="cartPopup">
+                <div class="cart">
+                    <!-- Header -->
+                    <div class="cart-header d-flex justify-content-between align-items-center">
+                        <h5 class="m-0">Your Cart</h5>
+                        <button class="closeBtn">
+                            <iconify-icon icon="material-symbols:close-rounded" width="24" height="24"></iconify-icon>
+                        </button>
+                    </div>
+                    <!-- Body -->
+                    <div class="cart-body">
+                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                    alt="Product" />
+                                <div>
+                                    <p class="mb-1 fw-semibold">Product Name</p>
+                                    <small class="text-muted">1 × $20</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">$20</span>
+                        </div>
+                        <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/banner-image/banner-1.webp" class="rounded img-fluid me-3"
+                                    alt="Product" />
+                                <div>
+                                    <p class="mb-1 fw-semibold">Another Item</p>
+                                    <small class="text-muted">2 × $15</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">$30</span>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="cart-footer">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="fw-semibold">Subtotal:</span>
+                            <span class="fw-bold">$50</span>
+                        </div>
+                        <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mobile menu footer -->
+        <div class="mobile-menu-footer d-lg-none d-block">
+            <div class="container">
+                <ul class="d-flex align-items-center justify-content-between">
+                    <li>
+                        <a href="index.html">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="ion:home-outline" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shop.html">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="bi:shop" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cartBox">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="mdi:cart-outline" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="active">
+                            <span class="iconify-icon">
+                                <iconify-icon icon="solar:user-linear" width="25" height="25"></iconify-icon>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <main style="margin-top: 100px;">
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <h1>About A B Electric & Automation</h1>
+                            <p>Leading the way in electrical solutions and automation technology for over a decade.
+                                We're committed to delivering excellence in every project we undertake.</p>
+                            <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-icon text-center">
+                            <iconify-icon icon="mdi:lightning-bolt" width="200" height="200"
+                                style="color: #28acd5;"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Overview -->
+        <section class="company-overview py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="section-title">Our Story</h2>
+                        <p>Founded in 2010, A B Electric & Automation has grown from a small local electrical service
+                            provider to a leading company in industrial automation and electrical solutions. Our journey
+                            began with a simple mission: to provide reliable, efficient, and innovative electrical
+                            services to businesses and homeowners alike.</p>
+                        <p>Over the years, we've expanded our expertise to include advanced automation systems, smart
+                            home solutions, and industrial control systems. Our team of certified electricians and
+                            automation specialists are dedicated to staying at the forefront of technology to deliver
+                            the best solutions for our clients.</p>
+                        <div class="stats d-flex justify-content-between mt-4">
+                            <div class="stat-item text-center">
+                                <h3>12+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="stat-item text-center">
+                                <h3>500+</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-item text-center">
+                                <h3>50+</h3>
+                                <p>Team Members</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="icon-gallery">
+                            <div class="row">
+                                <div class="col-6 mb-4 text-center">
+                                    <div class="icon-item">
+                                        <iconify-icon icon="mdi:factory" width="80" height="80"
+                                            style="color: #141651;"></iconify-icon>
+                                        <p class="mt-2">Industrial Automation</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-4 text-center">
+                                    <div class="icon-item">
+                                        <iconify-icon icon="mdi:home-automation" width="80" height="80"
+                                            style="color: #28acd5;"></iconify-icon>
+                                        <p class="mt-2">Smart Solutions</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <div class="icon-item">
+                                        <iconify-icon icon="mdi:quality-high" width="80" height="80"
+                                            style="color: #1a1a1a;"></iconify-icon>
+                                        <p class="mt-2">Quality Work</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <div class="icon-item">
+                                        <iconify-icon icon="mdi:account-group" width="80" height="80"
+                                            style="color: #141651;"></iconify-icon>
+                                        <p class="mt-2">Expert Team</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="mission-vision py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card mission-card h-100">
+                            <div class="card-body p-4">
+                                <div class="icon mb-3">
+                                    <iconify-icon icon="mdi:target" width="50" height="50"
+                                        style="color: #28acd5;"></iconify-icon>
+                                </div>
+                                <h3 class="card-title">Our Mission</h3>
+                                <p class="card-text">To provide innovative, reliable, and sustainable electrical and
+                                    automation solutions that empower businesses and enhance quality of life. We strive
+                                    to exceed customer expectations through technical excellence, superior service, and
+                                    unwavering commitment to safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card vision-card h-100">
+                            <div class="card-body p-4">
+                                <div class="icon mb-3">
+                                    <iconify-icon icon="mdi:eye-outline" width="50" height="50"
+                                        style="color: #141651;"></iconify-icon>
+                                </div>
+                                <h3 class="card-title">Our Vision</h3>
+                                <p class="card-text">To be the leading provider of electrical and automation solutions,
+                                    recognized for innovation, quality, and customer satisfaction. We envision a future
+                                    where technology seamlessly integrates with daily operations to create smarter, more
+                                    efficient environments for all our clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values -->
+        <section class="our-values py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Our Values</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="value-card text-center">
+                            <div class="value-icon mb-3">
+                                <iconify-icon icon="mdi:shield-check" width="60" height="60"
+                                    style="color: #28acd5;"></iconify-icon>
+                            </div>
+                            <h4>Quality</h4>
+                            <p>We never compromise on quality, ensuring every project meets the highest standards of
+                                excellence and safety.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="value-card text-center">
+                            <div class="value-icon mb-3">
+                                <iconify-icon icon="mdi:lightbulb-on" width="60" height="60"
+                                    style="color: #141651;"></iconify-icon>
+                            </div>
+                            <h4>Innovation</h4>
+                            <p>We embrace new technologies and creative solutions to solve complex challenges for our
+                                clients.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="value-card text-center">
+                            <div class="value-icon mb-3">
+                                <iconify-icon icon="mdi:account-group" width="60" height="60"
+                                    style="color: #28acd5;"></iconify-icon>
+                            </div>
+                            <h4>Teamwork</h4>
+                            <p>Collaboration is at the heart of our success, fostering an environment where every team
+                                member thrives.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="value-card text-center">
+                            <div class="value-icon mb-3">
+                                <iconify-icon icon="mdi:handshake" width="60" height="60"
+                                    style="color: #141651;"></iconify-icon>
+                            </div>
+                            <h4>Integrity</h4>
+                            <p>We conduct business with honesty, transparency, and respect for our clients, partners,
+                                and employees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Meet Our Leadership</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team-card text-center">
+                            <div class="team-icon mb-3">
+                                <iconify-icon icon="mdi:account" width="100" height="100"
+                                    style="color: #28acd5;"></iconify-icon>
+                            </div>
+                            <h4>John Anderson</h4>
+                            <p class="position">Chief Executive Officer</p>
+                            <p>With over 20 years in the electrical industry, John leads our company with vision and
+                                expertise.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team-card text-center">
+                            <div class="team-icon mb-3">
+                                <iconify-icon icon="mdi:account" width="100" height="100"
+                                    style="color: #141651;"></iconify-icon>
+                            </div>
+                            <h4>Sarah Mitchell</h4>
+                            <p class="position">Chief Technology Officer</p>
+                            <p>Sarah drives our innovation strategy, ensuring we stay ahead in automation technology.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team-card text-center">
+                            <div class="team-icon mb-3">
+                                <iconify-icon icon="mdi:account" width="100" height="100"
+                                    style="color: #28acd5;"></iconify-icon>
+                            </div>
+                            <h4>Michael Roberts</h4>
+                            <p class="position">Director of Operations</p>
+                            <p>Michael ensures our projects are delivered on time, within budget, and to the highest
+                                standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5"
+            style="background: linear-gradient(135deg, #141651 0%, #28acd5 100%); color: white;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3>Ready to Power Your Next Project?</h3>
+                        <p>Contact us today to discuss how our electrical and automation solutions can benefit your
+                            business or home.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-light btn-lg">Get A Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--* Footer -->
+    <footer>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mt-3 mt-lg-0">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./assets/images/logo/logo.png" alt="A B Electric & Automation" />
+                        </a>
+                    </div>
+                    <p>We specialize in electrical solutions and automation technology with over 12 years of experience.
+                        We provide reliable, efficient, and innovative services to businesses and homeowners alike.</p>
+                </div>
+                <div class="col-lg-4 customer-services mt-3 mt-lg-0">
+                    <h4>Customer Services</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Product Recall</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mt-3 mt-lg-0 contact">
+                    <h4>Contacts</h4>
+                    <hr>
+                    <ul>
+                        <li>
+                            <span class="iconify-icon">
+                                <iconify-icon icon="clarity:email-line" width="24" height="24"></iconify-icon>
+                            </span>
+                            <a href="mailto:support@abelectric.com">support@abelectric.com</a>
+                        </li>
+                        <li>
+                            <span class="iconify-icon">
+                                <iconify-icon icon="fluent:call-32-regular" width="24" height="24"></iconify-icon>
+                            </span>
+                            <a href="tel:07051591537">070 5159 1537</a>
+                        </li>
+                        <li>
+                            <span class="iconify-icon">
+                                <iconify-icon icon="tdesign:time" width="24" height="24"></iconify-icon>
+                            </span>
+                            <p class="d-inline-block">Mon. - Sat. 10:00 am - 20:00 pm</p>
+                        </li>
+                    </ul>
+                    <ul class="d-flex align-items-center shoshalmedia">
+                        <li>
+                            <a class="icon-facebook" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="flowbite:facebook-solid"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-instagram" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="ri:instagram-line" width="24" height="24"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-youtube" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="basil:youtube-outline"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-whatsapp" href="#">
+                                <span class="iconify-icon">
+                                    <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright">
+            <p>
+                &copy; 2025 A B Electric & Automation | Developed by
+                <a href="#">TechItNext</a>
+            </p>
+        </div>
+    </footer>
+
+   
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/iconify-icon.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
